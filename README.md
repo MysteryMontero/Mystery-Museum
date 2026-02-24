@@ -1,7 +1,7 @@
 # App Design Document
 
 ## App Name
-Mystery-Museum
+Mystery Museum
 
 ## Plan
 My plan for the final project is to make an app dedicated to my Minecraft mods and make it as unique and vivid as possible. i will be including all of the mods I have made up to this point along with ones still in development and future ideas.
@@ -27,10 +27,10 @@ The app will be mobile friendly with pressable buttons. The goal is to make the 
 4. The user can browse the details (images, videos, etc.) and can choose to download it.
 
 ## Components:
-App
-Header
-ItemList
-ItemCard
+- App
+- Header
+- ItemList
+- ItemCard
 
 ## State and Data:
 Data will consist of a list of items as well as an array of task objects.
