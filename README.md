@@ -14,8 +14,8 @@ Images, videos, and download links will be included along with information about
 Modding in Minecraft has been around for a long time to the point where it is now part of the game itself. It serves as a creative space for those with endless ideas and as a learning platform for aspiring programmers. Minecraft mods introduce new entities or gameplay mechanics that make the main game a whole lot more interesting and entertaining.
 
 ## Target Users
-Minecraft Players
-Mod Creators
+- Minecraft Players
+- Mod Creators
 
 ## Core Features
 The app will be mobile friendly with pressable buttons. The goal is to make the app as user-friendly as possible. A search bar will be implemented to make it easier to find certain mods. Possibly a drop down menu will be added to the site. Additional features will be added.
