@@ -2,6 +2,8 @@ import { StyleSheet, View, Text, Animated, Easing, ScrollView, Dimensions, Press
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useFonts } from 'expo-font';
 import { Image } from 'expo-image';
+import Slideshow from '@/components/Slideshow';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   const [fontsLoaded] = useFonts({
@@ -85,11 +87,13 @@ useEffect(() => {
 
 
   return (
-  <View style={styles.container}>
+  <ScrollView
+    style={styles.container}
+    contentContainerStyle={styles.scrollContent}
+    showsVerticalScrollIndicator
+  >
     <View style={styles.banner}>
-      <Animated.Text
-        style={[styles.title, { fontFamily: 'Minecraft', color: colorInterpolation }]}
-      >
+      <Animated.Text style={[styles.title, { fontFamily: 'Minecraft', color: colorInterpolation }]}>
         Mystery Museum
       </Animated.Text>
     </View>
@@ -102,39 +106,52 @@ useEffect(() => {
       />
     </View>
 
-    <Text style={styles.subtitle}>
-      Check Out Mystery's Minecraft Mods!
-    </Text>
+    <Text style={styles.subtitle}>Check Out Mystery's Minecraft Mods!</Text>
 
-    <View style={styles.sliderWrap}>
-  <Animated.View style={{ opacity: fadeAnim }}>
-    <Image
-      source={sliderImages[slideIndex]}
-      style={styles.slideImage}
-      contentFit="cover"
-    />
-  </Animated.View>
+    <Slideshow images={sliderImages} />
 
-  <View style={styles.dots}>
-    {sliderImages.map((_, i) => (
-      <Pressable key={i} onPress={() => setSlideIndex(i)} hitSlop={10}>
-        <View style={[styles.dot, i === slideIndex && styles.dotActive]} />
-      </Pressable>
-    ))}
-  </View>
-</View>
-</View>
-  );
+    <Link href="/(tabs)/mods" asChild>
+  <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>View All Mods</Text>
+    <Text style={styles.cardSub}>Browse everything I’ve released</Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/Goomba.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Vanoss Crew 2.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Fnaf.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
+    <View style={{ height: 600 }} />
+  </ScrollView>
+);
 }
 
 const styles = StyleSheet.create({
+  // Title
   container: {
     flex: 1,
     backgroundColor: '#1cbacf',
   },
+
   scrollContent: {
-    paddingBottom: 40,  // gives breathing room at bottom
+    flexGrow: 1,
+    paddingBottom: 40,
   },
+
   title: {
     fontSize: 60,
     fontWeight: 'bold',
@@ -145,6 +162,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 20,
   },
+
   subtitle: {
     marginTop: 20,
     fontSize: 60,
@@ -152,6 +170,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     textAlign: 'center',
   },
+
   banner: {
     width: '100%',
     paddingTop: 60,
@@ -159,49 +178,72 @@ const styles = StyleSheet.create({
     backgroundColor: '#00ffea',
     alignItems: 'center',
   },
+  
   imageContainer: {
     alignItems: 'center',
     marginTop: 20,
   },
+
   mainImage: {
     width: '100%',
     height: 500,
   },
 
 
-
+  // Slides
   sliderWrap: {
     marginTop: 20,
-    height: 240,
+    width: '100%',
+    alignItems: 'center',
   },
 
-  slidePage: {
-    alignItems: 'center',
+  slideFrame: {
+    width: '90%',
+    height: 260,
+    borderRadius: 16,
+    overflow: 'hidden',
+    backgroundColor: 'rgba(0,0,0,0.15)',
     justifyContent: 'center',
-    height: 220,
+    alignItems: 'center',
   },
 
   slideImage: {
     width: '100%',
-    height: 260,
-    borderRadius: 16,
+    height: '100%',
   },
 
-  dots: {
+
+  // Next Page
+  card: {
+    marginTop: 24,
+    width: '90%',
+    backgroundColor: 'rgba(0,0,0,0.25)',
+    borderRadius: 18,
+    paddingVertical: 18,
+    paddingHorizontal: 16,
+    alignSelf: 'center',
+  },
+
+  cardTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  cardSub: {
+    marginTop: 6,
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.85)',
+  },
+
+  previewRow: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: 10,
-    gap: 8,
+    justifyContent: 'space-between',
+    marginTop: 14,
   },
 
-  dot: {
-    width: 8,
-    height: 8,
-    borderRadius: 999,
-    backgroundColor: 'rgba(255,255,255,0.5)',
-  },
-
-  dotActive: {
-    backgroundColor: '#ffffff',
-  },
+previewImage: {
+  width: '32%',
+  height: 200,
+  borderRadius: 10,
+},
 });
