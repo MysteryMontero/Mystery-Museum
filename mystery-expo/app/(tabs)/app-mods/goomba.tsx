@@ -1,6 +1,25 @@
 import { useRouter } from 'expo-router';
-import { StyleSheet, View, Text, Pressable, ScrollView, Platform } from 'react-native';
+import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
+import Slideshow from '@/components/Slideshow';
+
+const sliderImages = [
+  require('../../../assets/images/Goomba.png'),
+  require('../../../assets/images/Goomba2.png'),
+];
+
+const downloadMod = () => {
+  if (Platform.OS === "web") {
+    window.open(
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Mod",
+      "_blank"
+    );
+  } else {
+    Linking.openURL(
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Mod"
+    );
+  }
+};
 
 export default function GoombaScreen() {
   const router = useRouter();
@@ -51,9 +70,25 @@ export default function GoombaScreen() {
       <Text style={styles.description}>
         Note: This mod is made for Bedrock Edition
       </Text>
+
+      <Text style={styles.sectionTitle}>Download</Text>
+
+      <Pressable
+        onPress={downloadMod}
+        style={styles.downloadButton}>
+        <Text style={styles.downloadText}>Download Goomba ZIP</Text>
+      </Pressable>
+
+      <Text style={styles.galleryTitle}>Gallery</Text>
+
+      <View style={styles.galleryContainer}>
+        <Slideshow images={sliderImages} />
+      </View>
     </ScrollView>
   );
 }
+
+
 
 
 
@@ -108,5 +143,35 @@ const styles = StyleSheet.create({
     marginTop: 20,
     lineHeight: 22,
     alignSelf: 'flex-start',
+  },
+
+  downloadButton: {
+    marginTop: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    backgroundColor: '#000000',
+    borderRadius: 12,
+    alignSelf: 'flex-start',
+  },
+
+  downloadText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+
+  galleryTitle: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 30,
+    textAlign: 'center',
+    width: '100%',
+  },
+
+  galleryContainer: {
+    width: '100%',
+    height: '10%',
+    marginTop: 10,
   },
 });
