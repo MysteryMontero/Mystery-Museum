@@ -4,24 +4,24 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Goomba.png'),
-  require('../../../assets/images/Goomba2.png'),
+  require('../../../assets/images/Propeller.png'),
+  require('../../../assets/images/Propeller2.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Propeller",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Propeller"
     );
   }
 };
 
-export default function GoombaScreen() {
+export default function PropellerScreen() {
   const router = useRouter();
 
   return (
@@ -34,37 +34,40 @@ export default function GoombaScreen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/JM_PBlQXg78"
-          title="Minecraft Goomba Mod Showcase"
+          src="https://www.youtube.com/embed/N4nnM9pwqPE"
+          title="Minecraft Propeller Boy Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/JM_PBlQXg78' }}
+          source={{ uri: 'https://www.youtube.com/embed/N4nnM9pwqPE' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Goomba</Text>
+      <Text style={styles.title}>Propeller Boy</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Goomba mod brings the classic enemy from the Super Mario series into Minecraft. 
-        This mob is able to walk around, attack certain monsters and can open iron doors.
-        If you attack them, they will attack you. There are also baby Goombas that can go
-        through small gaps. This mod adds a nostalgic crossover experience for Minecraft
-        players who enjoy the Mario universe. This is the first mod I have ever made and still is the crown jewel.
+        This was my first original mod idea. Say hello to Propeller Boy, a mod that is able to walk and fly
+        around the world. They are friendly little guys that will fight monsters for you. Just be nice to them,
+        otherwise they will get angry!
       </Text>
 
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into GoombaX, then go into builds and select GoombaX.mcaddon.
-        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want
-        to put the mob in and click on the pencil button to the right of your world to enter it's settings.
-        Go to behavior packs and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        Propeller Boy changes colors depending on the damage he takes. He has three colors: blue, yellow, and red.
+        He starts off as blue, meaning he won't attack you if you attack him. Doing enough damage will turn him yellow
+        and he'll run away from you. Doing more damage will turn him red, making him finally snap and attack the player.
+      </Text>
+              
+      <Text style={styles.description}>
+        To access the file, extract the zip. Go into Propeller Boy, then go into builds and select Propeller Boy.mcaddon.
+        Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want to
+        put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior
+        packs and resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -76,7 +79,7 @@ export default function GoombaScreen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Goomba ZIP</Text>
+        <Text style={styles.downloadText}>Download Propeller Boy ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>
