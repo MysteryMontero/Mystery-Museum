@@ -32,7 +32,7 @@ export default function HomeScreen() {
 
 
 const sliderImages = [
-  require('../../assets/images/TF2 Kazotsky Kick.png'),
+  require('../../assets/images/TF2/TF2 Kazotsky Kick.png'),
   require('../../assets/images/Danganronpa Trial.png'),
   require('../../assets/images/South Park.png'),
   require('../../assets/images/Country Balls.png'),
@@ -90,8 +90,8 @@ useEffect(() => {
   <ScrollView
     style={styles.container}
     contentContainerStyle={styles.scrollContent}
-    showsVerticalScrollIndicator
-  >
+    showsVerticalScrollIndicator>
+
     <View style={styles.banner}>
       <Animated.Text style={[styles.title, { fontFamily: 'Minecraft', color: colorInterpolation }]}>
         Mystery Museum
@@ -111,9 +111,9 @@ useEffect(() => {
     <Slideshow images={sliderImages} />
 
     <Link href="/(tabs)/mods" asChild>
-  <Pressable style={styles.card}>
-    <Text style={styles.cardTitle}>View All Mods</Text>
-    <Text style={styles.cardSub}>Browse everything I’ve released</Text>
+      <Pressable style={styles.card}>
+        <Text style={styles.cardTitle}>View All Mods</Text>
+        <Text style={styles.cardSub}>Browse everything I’ve released</Text>
 
     <View style={styles.previewRow}>
       <Image
@@ -135,9 +135,87 @@ useEffect(() => {
   </Pressable>
 </Link>
 
-    <View style={{ height: 600 }} />
-  </ScrollView>
-);
+<Link href="/(tabs)/mods" asChild>
+  <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>The Big Ones</Text>
+    <Text style={styles.cardSub}>View the most successful mods I have created</Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/TF2/TF2.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/South Park 2.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Slender Man.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
+<Link href="/(tabs)/mods" asChild>
+  <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>Future Projects</Text>
+    <Text style={styles.cardSub}>Have a sneak peak at some mods that are still in development
+      or are just planned ideas in the future
+    </Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/Italy Tank.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Mario Jump.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Johnny Bravo.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
+
+<Link href="/(tabs)/mods" asChild>
+  <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>Exclusive Features</Text>
+    <Text style={styles.cardSub}>Bonus additional features and mods that are Patreon exclusive</Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/Banana Bus.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Color Headcrabs.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Banana Bus 2.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
+      <View style={{ height: 600 }} />
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -229,6 +307,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
   },
+  
   cardSub: {
     marginTop: 6,
     fontSize: 14,
@@ -241,9 +320,9 @@ const styles = StyleSheet.create({
     marginTop: 14,
   },
 
-previewImage: {
-  width: '32%',
-  height: 200,
-  borderRadius: 10,
-},
+  previewImage: {
+    width: '32%',
+    height: 200,
+    borderRadius: 10,
+  },
 });

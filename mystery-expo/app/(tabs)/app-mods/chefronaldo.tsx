@@ -4,24 +4,24 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Bob-omb.png'),
-  require('../../../assets/images/Bob-omb2.png'),
+  require('../../../assets/images/Chef.png'),
+  require('../../../assets/images/Chef2.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Chef",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Chef"
     );
   }
 };
 
-export default function BobombScreen() {
+export default function ChefScreen() {
   const router = useRouter();
 
   return (
@@ -34,49 +34,44 @@ export default function BobombScreen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/mRiv7mUdy5k"
-          title="Minecraft Bob-omb Mod Showcase"
+          src="https://www.youtube.com/embed/0qh1hewwdXI"
+          title="Minecraft Chef Ronaldo Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/mRiv7mUdy5k' }}
+          source={{ uri: 'https://www.youtube.com/embed/0qh1hewwdXI' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Bob-omb</Text>
+      <Text style={styles.title}>Chef Ronaldo</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Bob-omb mod brings the classic enemy from the Super Mario series into Minecraft; the Bob-omb. 
-        This mod is able to walk around and attack certain monsters. When they are hit, the will enter
-        armed mode and turn red. While in this phase, they will explode after a short period of time, making
-        them a ticking time bomb. Best run away when they are red.
+        Hello! I am Chef Ronaldo! I provide you with fresh food from the dump-I mean! 5 star restaurant!
+        Hon Hon Hon! No refunds.
       </Text>
 
       <Text style={styles.description}>
-        There are two colors of Bob-ombs; black and pink. Both do the same thing.
+        Chef Ronaldo was my first human mod and was able to help me figure out humanoid attributes for future projects.
+        This mob summons a chef in Minecraft. They are able to trade food with you similar to how a villager trades.
+        They are also able to fight monsters and hunt down animals using their axe and their ability to shoot fire
+        (don't ask). They can also drop cake from time to time.
       </Text>
 
       <Text style={styles.description}>
-        There are baby versions of Bob-ombs which are able to fit through small gaps.
-      </Text>
-
-      <Text style={styles.description}>
-        Bob-ombs only spawn in caves.
+        There are 4 different chef skins, but all act the same.
       </Text>
               
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into Bob-bombZ, then go into builds and
-        select Bob-bombZ.mcaddon. Remember you need to have Minecraft installed for this
-        to work. Open Minecraft, go to a world you want to put the mob in and click on the
-        pencil button to the right of your world to enter it's settings. Go to behavior packs
-        and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        To access the file, extract the zip. Go into Chef Ronaldo, then go into builds and select Chef Ronaldo.mcaddon.
+        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want to put
+        the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior packs
+        and resource packs and activate the mob from there. It should appear in villages now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -88,7 +83,7 @@ export default function BobombScreen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Bob-omb ZIP</Text>
+        <Text style={styles.downloadText}>Download Chef Ronaldo ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

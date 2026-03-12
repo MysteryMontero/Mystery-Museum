@@ -4,24 +4,30 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Bob-omb.png'),
-  require('../../../assets/images/Bob-omb2.png'),
+  require('../../../assets/images/Slime Rancher/Slime Rancher 2.png'),
+  require('../../../assets/images/Slime Rancher/Pink Slime.png'),
+  require('../../../assets/images/Slime Rancher/Blue Slime.png'),
+  require('../../../assets/images/Slime Rancher/Green Slime.png'),
+  require('../../../assets/images/Slime Rancher/Orange Slime.png'),
+  require('../../../assets/images/Slime Rancher/Purple Slime.png'),
+  require('../../../assets/images/Slime Rancher/Yellow Slime.png'),
+  require('../../../assets/images/Slime Rancher/Red Slime.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slime",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slime"
     );
   }
 };
 
-export default function BobombScreen() {
+export default function ChefScreen() {
   const router = useRouter();
 
   return (
@@ -34,49 +40,47 @@ export default function BobombScreen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/mRiv7mUdy5k"
-          title="Minecraft Bob-omb Mod Showcase"
+          src="https://www.youtube.com/embed/bX-PuX2kFmQ"
+          title="Minecraft Chef Ronaldo Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/mRiv7mUdy5k' }}
+          source={{ uri: 'https://www.youtube.com/embed/bX-PuX2kFmQ' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Bob-omb</Text>
+      <Text style={styles.title}>Slime Rancher</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Bob-omb mod brings the classic enemy from the Super Mario series into Minecraft; the Bob-omb. 
-        This mod is able to walk around and attack certain monsters. When they are hit, the will enter
-        armed mode and turn red. While in this phase, they will explode after a short period of time, making
-        them a ticking time bomb. Best run away when they are red.
+        I based these little guys off of Slime Rancher. They're cute little creatures who love to bounce around!
+        Every creature in Minecraft loves them, which is why you should never ever hurt them! **EVER** You have been warned.
       </Text>
 
       <Text style={styles.description}>
-        There are two colors of Bob-ombs; black and pink. Both do the same thing.
+        This mod has player mechanics, meaning that every monster will see this as a player and will attempt to attack it.
+         Once this mod gets hurt, other entities nearby will come and attack the attacker. For example, if a zombie attacks
+         a Slimey, other zombies or monsters will attack said zombie. It's really fun to play around with. If YOU attack a
+         Slimey, the same will happen to you, so be careful.
       </Text>
 
       <Text style={styles.description}>
-        There are baby versions of Bob-ombs which are able to fit through small gaps.
-      </Text>
-
-      <Text style={styles.description}>
-        Bob-ombs only spawn in caves.
+        Slimeys can carry apples on them or even golden apples. If you kill one, it may potentially drop one,
+        a risky gamble though. You can tame Slimeys by feeding them slime balls. They will stop bouncing and
+        follow you from now on. They don't do anything, but it's fun to make a slime army. There are 10 different
+        types of Slimeys, 7 common ones and 3 rare ones. Try to find them all!
       </Text>
               
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into Bob-bombZ, then go into builds and
-        select Bob-bombZ.mcaddon. Remember you need to have Minecraft installed for this
-        to work. Open Minecraft, go to a world you want to put the mob in and click on the
-        pencil button to the right of your world to enter it's settings. Go to behavior packs
-        and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        To access the file, extract the zip. Go into Slime Rancher, then go into builds and select Slime Rancher.mcaddon.
+        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want to put the
+        mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior packs and
+        resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -88,7 +92,7 @@ export default function BobombScreen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Bob-omb ZIP</Text>
+        <Text style={styles.downloadText}>Download Slime Rancher ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

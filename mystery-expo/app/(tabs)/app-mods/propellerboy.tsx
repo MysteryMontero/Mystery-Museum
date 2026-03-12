@@ -1,5 +1,5 @@
-import { useRouter } from 'expo-router';
 import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
+import { useRouter } from 'expo-router';
 import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 

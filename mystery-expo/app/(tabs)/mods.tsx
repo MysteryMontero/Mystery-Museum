@@ -1,9 +1,11 @@
-import { StyleSheet, View, Text, Pressable } from 'react-native';
-import { Link, useRouter } from 'expo-router';
+import { useState } from 'react';
+import { StyleSheet, View, Text, Pressable, ScrollView, TextInput } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Image } from 'expo-image';
 
 export default function ModsScreen() {
   const router = useRouter();
+  const [search, setSearch] = useState('');
 
   const mods = [
     {
@@ -11,53 +13,79 @@ export default function ModsScreen() {
       title: 'Goomba',
       desc: 'Classic Goomba from the Super Mario series.',
       image: require('../../assets/images/Goomba.png'),
+      href: '/(tabs)/app-mods/goomba',
     },
     {
       id: 'bob-omb',
       title: 'Bob-omb',
       desc: 'The exploding fiend from the Super Mario series.',
       image: require('../../assets/images/Bob-omb.png'),
+      href: '/(tabs)/app-mods/bob-omb',
     },
     {
       id: 'propellerboy',
       title: 'Propeller Boy',
       desc: 'A friendly little flying fellow.',
       image: require('../../assets/images/Propeller.png'),
+      href: '/(tabs)/app-mods/propellerboy',
     },
     {
       id: 'chefronaldo',
       title: 'Chef Ronaldo',
       desc: 'A professional chef...I think...',
       image: require('../../assets/images/Chef.png'),
-    }
+      href: '/(tabs)/app-mods/chefronaldo',
+    },
+    {
+      id: 'slimerancher',
+      title: 'Slime Rancher',
+      desc: 'Cute little slimeys that love to bounce around',
+      image: require('../../assets/images/Slime Rancher/Slime Rancher.png'),
+      href: '/(tabs)/app-mods/slimerancher',
+    },
   ];
 
+  const filteredMods = mods.filter((mod) =>
+    mod.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <View style={styles.container}>
-      <Pressable onPress={() => router.replace('/(tabs)')} style={styles.backButton}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+      <Pressable onPress={() => router.replace('/(tabs)' as any)} style={styles.backButton}>
         <Text style={styles.backText}>← Back</Text>
       </Pressable>
 
       <Text style={styles.header}>All Mods</Text>
 
+      <TextInput
+        style={styles.searchBar}
+        placeholder="Search mods..."
+        placeholderTextColor="rgba(255,255,255,0.7)"
+        value={search}
+        onChangeText={setSearch}
+      />
+
       <View style={styles.cardGrid}>
-        {mods.map((mod) => (
-          <Link key={mod.id} href={`/(tabs)/app-mods/${mod.id}`} asChild>
-            <Pressable
-              key={mod.id}
-              style={styles.card}
-              onPress={() => router.push(`/(tabs)/app-mods/${mod.id}` as any)}>
-              <Image source={mod.image} style={styles.cardImage} contentFit="cover" />
-              <View style={styles.cardBody}>
-                <Text style={styles.cardTitle}>{mod.title}</Text>
-                <Text style={styles.cardDesc}>{mod.desc}</Text>
-                <Text style={styles.cardHint}>Tap to view details →</Text>
-              </View>
-            </Pressable>
-          </Link>
+        {filteredMods.map((mod) => (
+          <Pressable
+            key={mod.id}
+            style={styles.card}
+            onPress={() => router.push(mod.href as any)}
+          >
+            <Image source={mod.image} style={styles.cardImage} contentFit="cover" />
+            <View style={styles.cardBody}>
+              <Text style={styles.cardTitle}>{mod.title}</Text>
+              <Text style={styles.cardDesc}>{mod.desc}</Text>
+              <Text style={styles.cardHint}>Tap to view details →</Text>
+            </View>
+          </Pressable>
         ))}
       </View>
-    </View>
+
+      {filteredMods.length === 0 && (
+        <Text style={styles.noResults}>Just what exactly are you typing?</Text>
+      )}
+    </ScrollView>
   );
 }
 
@@ -69,7 +97,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
 
+  content: {
+    paddingBottom: 40,
+  },
+
   backButton: {
+    alignSelf: 'flex-start',
     marginBottom: 10,
   },
 
@@ -84,12 +117,27 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     marginBottom: 16,
+    textAlign: 'center',
+    width: '100%',
+  },
+
+  searchBar: {
+    width: '60%',
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0.25)',
+    color: '#fff',
+    fontSize: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    marginBottom: 24,
   },
 
   cardGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 16,
+    paddingLeft: 40,
   },
 
   card: {
@@ -124,5 +172,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 13,
     color: 'rgba(255,255,255,0.75)',
+  },
+
+  noResults: {
+    marginTop: 30,
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#fff',
   },
 });
