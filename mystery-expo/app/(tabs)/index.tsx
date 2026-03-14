@@ -162,6 +162,31 @@ useEffect(() => {
 
 <Link href="/(tabs)/mods" asChild>
   <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>Country Balls Project</Text>
+    <Text style={styles.cardSub}>Check out my long term project: Country Balls</Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/Country/Country.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Country/USA/USA.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+      <Image
+        source={require('../../assets/images/Country/Country2.png')}
+        style={styles.previewImage}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
+<Link href="/(tabs)/mods" asChild>
+  <Pressable style={styles.card}>
     <Text style={styles.cardTitle}>Future Projects</Text>
     <Text style={styles.cardSub}>Have a sneak peak at some mods that are still in development
       or are just planned ideas in the future
@@ -180,32 +205,6 @@ useEffect(() => {
       />
       <Image
         source={require('../../assets/images/Johnny Bravo.png')}
-        style={styles.previewImage}
-        contentFit="cover"
-      />
-    </View>
-  </Pressable>
-</Link>
-
-
-<Link href="/(tabs)/mods" asChild>
-  <Pressable style={styles.card}>
-    <Text style={styles.cardTitle}>Exclusive Features</Text>
-    <Text style={styles.cardSub}>Bonus additional features and mods that are Patreon exclusive</Text>
-
-    <View style={styles.previewRow}>
-      <Image
-        source={require('../../assets/images/Banana Bus.png')}
-        style={styles.previewImage}
-        contentFit="cover"
-      />
-      <Image
-        source={require('../../assets/images/Color Headcrabs.png')}
-        style={styles.previewImage}
-        contentFit="cover"
-      />
-      <Image
-        source={require('../../assets/images/Banana Bus 2.png')}
         style={styles.previewImage}
         contentFit="cover"
       />

@@ -21,7 +21,7 @@ const downloadMod = () => {
   }
 };
 
-export default function PropellerScreen() {
+export default function Screen() {
   const router = useRouter();
 
   return (

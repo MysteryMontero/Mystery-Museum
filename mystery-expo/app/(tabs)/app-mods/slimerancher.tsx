@@ -27,7 +27,7 @@ const downloadMod = () => {
   }
 };
 
-export default function ChefScreen() {
+export default function Screen() {
   const router = useRouter();
 
   return (
@@ -64,9 +64,9 @@ export default function ChefScreen() {
 
       <Text style={styles.description}>
         This mod has player mechanics, meaning that every monster will see this as a player and will attempt to attack it.
-         Once this mod gets hurt, other entities nearby will come and attack the attacker. For example, if a zombie attacks
-         a Slimey, other zombies or monsters will attack said zombie. It's really fun to play around with. If YOU attack a
-         Slimey, the same will happen to you, so be careful.
+        Once this mod gets hurt, other entities nearby will come and attack the attacker. For example, if a zombie attacks
+        a Slimey, other zombies or monsters will attack said zombie. It's really fun to play around with. If YOU attack a
+        Slimey, the same will happen to you, so be careful.
       </Text>
 
       <Text style={styles.description}>

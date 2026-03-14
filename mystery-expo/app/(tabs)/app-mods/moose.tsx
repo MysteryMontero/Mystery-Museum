@@ -4,19 +4,21 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Bob-omb.png'),
-  require('../../../assets/images/Bob-omb2.png'),
+  require('../../../assets/images/Crazy/Moose.png'),
+  require('../../../assets/images/Crazy/Moose2.png'),
+  require('../../../assets/images/Crazy/Moose3.png'),
+  require('../../../assets/images/Crazy/Moose4.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose"
     );
   }
 };
@@ -34,49 +36,45 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/mRiv7mUdy5k"
-          title="Minecraft Bob-omb Mod Showcase"
+          src="https://www.youtube.com/embed/U8rhxe50waM"
+          title="Minecraft Moose Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/mRiv7mUdy5k' }}
+          source={{ uri: 'https://www.youtube.com/embed/U8rhxe50waM' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Bob-omb</Text>
+      <Text style={styles.title}>Moose</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Bob-omb mod brings the classic enemy from the Super Mario series into Minecraft; the Bob-omb. 
-        This mod is able to walk around and attack certain monsters. When they are hit, the will enter
-        armed mode and turn red. While in this phase, they will explode after a short period of time, making
-        them a ticking time bomb. Best run away when they are red.
+        Moose, Crazy's best friend that probably weighs over 400 pounds. This giant muscle of a moose will not take crud
+        from nobody. If you know any better, don't mess with him, and especially don't mess with his best friend Crazy
+        the Deer while he's around!
       </Text>
 
       <Text style={styles.description}>
-        There are two colors of Bob-ombs; black and pink. Both do the same thing.
+        This mod summons a Moose. They will not attack you unless you attack them or a Crazy. Like Crazy, you can feed
+        him carrots and potatoes (Note: Mob grieving must be on). You can also ride on his back. You can't control him
+        but he's a nice safeguard from monsters. There are also baby Moose who are just as tough. Do not let their
+        cuteness fool you!
       </Text>
 
       <Text style={styles.description}>
-        There are baby versions of Bob-ombs which are able to fit through small gaps.
+        The Crazy the Deer mod is not necessary for this mod but this mod does interact with Crazy.
       </Text>
 
       <Text style={styles.description}>
-        Bob-ombs only spawn in caves.
-      </Text>
-              
-      <Text style={styles.description}>
-        To access the file, extract the zip. Go into Bob-bombZ, then go into builds and
-        select Bob-bombZ.mcaddon. Remember you need to have Minecraft installed for this
-        to work. Open Minecraft, go to a world you want to put the mob in and click on the
-        pencil button to the right of your world to enter it's settings. Go to behavior packs
-        and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        To access the file, extract the zip. Go into MooseX folder, then go into builds and select MooseX.mcaddon.
+        Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want
+        to put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior
+        packs and resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -88,7 +86,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Bob-omb ZIP</Text>
+        <Text style={styles.downloadText}>Download Moose ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

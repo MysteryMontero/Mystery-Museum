@@ -11,21 +11,21 @@ export default function ModsScreen() {
     {
       id: 'goomba',
       title: 'Goomba',
-      desc: 'Classic Goomba from the Super Mario series.',
+      desc: 'Classic Goomba from the Super Mario series',
       image: require('../../assets/images/Goomba.png'),
       href: '/(tabs)/app-mods/goomba',
     },
     {
       id: 'bob-omb',
       title: 'Bob-omb',
-      desc: 'The exploding fiend from the Super Mario series.',
+      desc: 'The exploding fiend from the Super Mario series',
       image: require('../../assets/images/Bob-omb.png'),
       href: '/(tabs)/app-mods/bob-omb',
     },
     {
       id: 'propellerboy',
       title: 'Propeller Boy',
-      desc: 'A friendly little flying fellow.',
+      desc: 'A friendly little flying fellow',
       image: require('../../assets/images/Propeller.png'),
       href: '/(tabs)/app-mods/propellerboy',
     },
@@ -42,6 +42,27 @@ export default function ModsScreen() {
       desc: 'Cute little slimeys that love to bounce around',
       image: require('../../assets/images/Slime Rancher/Slime Rancher.png'),
       href: '/(tabs)/app-mods/slimerancher',
+    },
+    {
+      id: 'crazythedeer',
+      title: 'Crazy the Deer',
+      desc: 'One crazy bloody deer who is probably on super steroids',
+      image: require('../../assets/images/Crazy/Crazy.png'),
+      href: '/(tabs)/app-mods/crazythedeer',
+    },
+    {
+      id: 'moose',
+      title: 'Moose',
+      desc: 'A big buff moose who does not take sh*t from no one',
+      image: require('../../assets/images/Crazy/Moose.png'),
+      href: '/(tabs)/app-mods/moose',
+    },
+    {
+      id: 'goatee',
+      title: 'Goatee',
+      desc: 'A goat guy that eats anything and knows how to ram! (Includes Demon Goat Mod)',
+      image: require('../../assets/images/Crazy/Goatee.png'),
+      href: '/(tabs)/app-mods/goatee',
     },
   ];
 

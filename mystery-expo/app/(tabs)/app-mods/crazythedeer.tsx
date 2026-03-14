@@ -4,19 +4,24 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Bob-omb.png'),
-  require('../../../assets/images/Bob-omb2.png'),
+  require('../../../assets/images/Crazy/Crazy2.png'),
+  require('../../../assets/images/Crazy/Crazy3.png'),
+  require('../../../assets/images/Crazy/Crazy4.png'),
+  require('../../../assets/images/Crazy/Crazy5.png'),
+  require('../../../assets/images/Crazy/Crazy6.png'),
+  require('../../../assets/images/Crazy/Crazy7.png'),
+  require('../../../assets/images/Crazy/Crazy8.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Crazy",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Crazy"
     );
   }
 };
@@ -34,49 +39,47 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/mRiv7mUdy5k"
-          title="Minecraft Bob-omb Mod Showcase"
+          src="https://www.youtube.com/embed/t_uQ4QDsMLc"
+          title="Minecraft Crazy the Deer Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/mRiv7mUdy5k' }}
+          source={{ uri: 'https://www.youtube.com/embed/t_uQ4QDsMLc' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Bob-omb</Text>
+      <Text style={styles.title}>Crazy the Deer</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Bob-omb mod brings the classic enemy from the Super Mario series into Minecraft; the Bob-omb. 
-        This mod is able to walk around and attack certain monsters. When they are hit, the will enter
-        armed mode and turn red. While in this phase, they will explode after a short period of time, making
-        them a ticking time bomb. Best run away when they are red.
+        He's fast! He's crazy! Ladies and gentlemen, I give you...Crazy the Deer! Let me break it down for you.
+        He's a deer, and you are the hunter. Your goal? CATCH THAT CRAZY DEER!!! This deer could be carrying rare goods,
+        such a iron, emeralds, and even diamonds! Don't let him keep it for himself!
       </Text>
 
       <Text style={styles.description}>
-        There are two colors of Bob-ombs; black and pink. Both do the same thing.
+        This mod summons Crazy the Deer. They are harmless mobs that spawn in specific biomes such as forests and icelands.
+        This mod comes in various skins depending on the biome, but all are the same. They will run away if you attack
+        them or get near them. Killing them will result them dropping meat, iron, emeralds, or diamonds. Other mods will
+        also try to kill him such as Chefs and Zombies. You can also feed him food like carrots by dropping it in front
+        of him (Note: Mob grieving must be on). You can also feed him directly and heal him.
       </Text>
 
       <Text style={styles.description}>
-        There are baby versions of Bob-ombs which are able to fit through small gaps.
+        The Chef mod is not necessary for this mod but does interact with Crazy.
       </Text>
 
       <Text style={styles.description}>
-        Bob-ombs only spawn in caves.
-      </Text>
-              
-      <Text style={styles.description}>
-        To access the file, extract the zip. Go into Bob-bombZ, then go into builds and
-        select Bob-bombZ.mcaddon. Remember you need to have Minecraft installed for this
-        to work. Open Minecraft, go to a world you want to put the mob in and click on the
-        pencil button to the right of your world to enter it's settings. Go to behavior packs
-        and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        To access the file, extract the zip. Go into Crazy the Deer folder, then go into builds and select Crazy the
+        Deer.mcaddon. Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you
+        want to put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to
+        behavior packs and resource packs and activate the mob from there. It should appear in your world now and have
+        a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -88,7 +91,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Bob-omb ZIP</Text>
+        <Text style={styles.downloadText}>Download Crazy the Deer ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

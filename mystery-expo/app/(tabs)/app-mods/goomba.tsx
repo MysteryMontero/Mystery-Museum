@@ -21,7 +21,7 @@ const downloadMod = () => {
   }
 };
 
-export default function GoombaScreen() {
+export default function Screen() {
   const router = useRouter();
 
   return (
