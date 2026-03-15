@@ -80,7 +80,7 @@ useEffect(() => {
   const timer = setInterval(() => {
     const next = (index + 1) % sliderImages.length;
     goToIndex(next);
-  }, 2500); // change speed here (ms)
+  }, 2500); // change speed here
 
   return () => clearInterval(timer);
 }, [index, goToIndex, sliderImages.length]);
@@ -172,12 +172,12 @@ useEffect(() => {
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/Country/USA/USA.png')}
+        source={require('../../assets/images/Country/Country2.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/Country/Country2.png')}
+        source={require('../../assets/images/Country/Country3.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
