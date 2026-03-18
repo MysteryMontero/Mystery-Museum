@@ -4,19 +4,19 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Goomba.png'),
-  require('../../../assets/images/Goomba2.png'),
+  require('../../../assets/images/Bob-omb.png'),
+  require('../../../assets/images/Bob-omb2.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Bobomb"
     );
   }
 };
@@ -34,36 +34,48 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/JM_PBlQXg78"
-          title="Minecraft Goomba Mod Showcase"
+          src="https://www.youtube.com/embed/mRiv7mUdy5k"
+          title="Minecraft Bob-omb Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/JM_PBlQXg78' }}
+          source={{ uri: 'https://www.youtube.com/embed/mRiv7mUdy5k' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Goomba</Text>
+      <Text style={styles.title}>Bob-omb</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Goomba mod brings the classic enemy from the Super Mario series into Minecraft. 
-        This mob is able to walk around, attack certain monsters and can open iron doors.
-        If you attack them, they will attack you. There are also baby Goombas that can go
-        through small gaps. This mod adds a nostalgic crossover experience for Minecraft
-        players who enjoy the Mario universe. This is the first mod I have ever made and still is the crown jewel.
+        The Bob-omb mod brings the classic enemy from the Super Mario series into Minecraft; the Bob-omb. 
+        This mod is able to walk around and attack certain monsters. When they are hit, the will enter
+        armed mode and turn red. While in this phase, they will explode after a short period of time, making
+        them a ticking time bomb. Best run away when they are red.
       </Text>
 
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into GoombaX, then go into builds and select GoombaX.mcaddon.
-        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want
-        to put the mob in and click on the pencil button to the right of your world to enter it's settings.
-        Go to behavior packs and resource packs and activate the mob from there. It should appear in your world
+        There are two colors of Bob-ombs; black and pink. Both do the same thing.
+      </Text>
+
+      <Text style={styles.description}>
+        There are baby versions of Bob-ombs which are able to fit through small gaps.
+      </Text>
+
+      <Text style={styles.description}>
+        Bob-ombs only spawn in caves.
+      </Text>
+              
+      <Text style={styles.description}>
+        To access the file, extract the zip. Go into Bob-bombZ, then go into builds and
+        select Bob-bombZ.mcaddon. Remember you need to have Minecraft installed for this
+        to work. Open Minecraft, go to a world you want to put the mob in and click on the
+        pencil button to the right of your world to enter it's settings. Go to behavior packs
+        and resource packs and activate the mob from there. It should appear in your world
         now and have a spawn egg.
       </Text>
 
@@ -76,7 +88,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Goomba ZIP</Text>
+        <Text style={styles.downloadText}>Download Bob-omb ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

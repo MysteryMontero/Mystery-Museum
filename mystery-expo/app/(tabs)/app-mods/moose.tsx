@@ -4,19 +4,21 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Goomba.png'),
-  require('../../../assets/images/Goomba2.png'),
+  require('../../../assets/images/Crazy/Moose.png'),
+  require('../../../assets/images/Crazy/Moose2.png'),
+  require('../../../assets/images/Crazy/Moose3.png'),
+  require('../../../assets/images/Crazy/Moose4.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose"
     );
   }
 };
@@ -34,37 +36,45 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/JM_PBlQXg78"
-          title="Minecraft Goomba Mod Showcase"
+          src="https://www.youtube.com/embed/U8rhxe50waM"
+          title="Minecraft Moose Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/JM_PBlQXg78' }}
+          source={{ uri: 'https://www.youtube.com/embed/U8rhxe50waM' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Goomba</Text>
+      <Text style={styles.title}>Moose</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Goomba mod brings the classic enemy from the Super Mario series into Minecraft. 
-        This mob is able to walk around, attack certain monsters and can open iron doors.
-        If you attack them, they will attack you. There are also baby Goombas that can go
-        through small gaps. This mod adds a nostalgic crossover experience for Minecraft
-        players who enjoy the Mario universe. This is the first mod I have ever made and still is the crown jewel.
+        Moose, Crazy's best friend that probably weighs over 400 pounds. This giant muscle of a moose will not take crud
+        from nobody. If you know any better, don't mess with him, and especially don't mess with his best friend Crazy
+        the Deer while he's around!
       </Text>
 
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into GoombaX, then go into builds and select GoombaX.mcaddon.
-        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want
-        to put the mob in and click on the pencil button to the right of your world to enter it's settings.
-        Go to behavior packs and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        This mod summons a Moose. They will not attack you unless you attack them or a Crazy. Like Crazy, you can feed
+        him carrots and potatoes (Note: Mob grieving must be on). You can also ride on his back. You can't control him
+        but he's a nice safeguard from monsters. There are also baby Moose who are just as tough. Do not let their
+        cuteness fool you!
+      </Text>
+
+      <Text style={styles.description}>
+        The Crazy the Deer mod is not necessary for this mod but this mod does interact with Crazy.
+      </Text>
+
+      <Text style={styles.description}>
+        To access the file, extract the zip. Go into MooseX folder, then go into builds and select MooseX.mcaddon.
+        Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want
+        to put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior
+        packs and resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -76,7 +86,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Goomba ZIP</Text>
+        <Text style={styles.downloadText}>Download Moose ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

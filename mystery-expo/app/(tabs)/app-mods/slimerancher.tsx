@@ -4,19 +4,25 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Goomba.png'),
-  require('../../../assets/images/Goomba2.png'),
+  require('../../../assets/images/Slime Rancher/Slime Rancher 2.png'),
+  require('../../../assets/images/Slime Rancher/Pink Slime.png'),
+  require('../../../assets/images/Slime Rancher/Blue Slime.png'),
+  require('../../../assets/images/Slime Rancher/Green Slime.png'),
+  require('../../../assets/images/Slime Rancher/Orange Slime.png'),
+  require('../../../assets/images/Slime Rancher/Purple Slime.png'),
+  require('../../../assets/images/Slime Rancher/Yellow Slime.png'),
+  require('../../../assets/images/Slime Rancher/Red Slime.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slime",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slime"
     );
   }
 };
@@ -34,37 +40,47 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/JM_PBlQXg78"
-          title="Minecraft Goomba Mod Showcase"
+          src="https://www.youtube.com/embed/bX-PuX2kFmQ"
+          title="Minecraft Chef Ronaldo Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/JM_PBlQXg78' }}
+          source={{ uri: 'https://www.youtube.com/embed/bX-PuX2kFmQ' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Goomba</Text>
+      <Text style={styles.title}>Slime Rancher</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The Goomba mod brings the classic enemy from the Super Mario series into Minecraft. 
-        This mob is able to walk around, attack certain monsters and can open iron doors.
-        If you attack them, they will attack you. There are also baby Goombas that can go
-        through small gaps. This mod adds a nostalgic crossover experience for Minecraft
-        players who enjoy the Mario universe. This is the first mod I have ever made and still is the crown jewel.
+        I based these little guys off of Slime Rancher. They're cute little creatures who love to bounce around!
+        Every creature in Minecraft loves them, which is why you should never ever hurt them! **EVER** You have been warned.
       </Text>
 
       <Text style={styles.description}>
-        To access the file, extract the zip. Go into GoombaX, then go into builds and select GoombaX.mcaddon.
-        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want
-        to put the mob in and click on the pencil button to the right of your world to enter it's settings.
-        Go to behavior packs and resource packs and activate the mob from there. It should appear in your world
-        now and have a spawn egg.
+        This mod has player mechanics, meaning that every monster will see this as a player and will attempt to attack it.
+        Once this mod gets hurt, other entities nearby will come and attack the attacker. For example, if a zombie attacks
+        a Slimey, other zombies or monsters will attack said zombie. It's really fun to play around with. If YOU attack a
+        Slimey, the same will happen to you, so be careful.
+      </Text>
+
+      <Text style={styles.description}>
+        Slimeys can carry apples on them or even golden apples. If you kill one, it may potentially drop one,
+        a risky gamble though. You can tame Slimeys by feeding them slime balls. They will stop bouncing and
+        follow you from now on. They don't do anything, but it's fun to make a slime army. There are 10 different
+        types of Slimeys, 7 common ones and 3 rare ones. Try to find them all!
+      </Text>
+              
+      <Text style={styles.description}>
+        To access the file, extract the zip. Go into Slime Rancher, then go into builds and select Slime Rancher.mcaddon.
+        Remember you need to have Minecraft installed for this to work. Open Minecraft, go to a world you want to put the
+        mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior packs and
+        resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -76,7 +92,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Goomba ZIP</Text>
+        <Text style={styles.downloadText}>Download Slime Rancher ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>
