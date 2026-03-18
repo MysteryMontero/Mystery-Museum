@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
 
 previewImage: {
   width: '32%',
-  height: 200,
+  height: 300,
   borderRadius: 10,
 },
 });
