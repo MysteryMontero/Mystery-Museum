@@ -135,7 +135,7 @@ useEffect(() => {
   </Pressable>
 </Link>
 
-<Link href="/(tabs)/mods" asChild>
+<Link href="/(tabs)/pop_mods" asChild>
   <Pressable style={styles.card}>
     <Text style={styles.cardTitle}>The Big Ones</Text>
     <Text style={styles.cardSub}>View the most successful mods I have created</Text>
@@ -160,7 +160,7 @@ useEffect(() => {
   </Pressable>
 </Link>
 
-<Link href="/(tabs)/mods" asChild>
+<Link href="/(tabs)/country_mods" asChild>
   <Pressable style={styles.card}>
     <Text style={styles.cardTitle}>Country Balls Project</Text>
     <Text style={styles.cardSub}>Check out my long term project: Country Balls</Text>
@@ -318,9 +318,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 14,
   },
-previewImage: {
-  width: '32%',
-  height: 300,
-  borderRadius: 10,
-},
+
+  previewImage: {
+    width: '32%',
+    height: 300,
+    borderRadius: 10,
+  },
 });

@@ -3,66 +3,17 @@ import { StyleSheet, View, Text, Pressable, ScrollView, TextInput } from 'react-
 import { useRouter } from 'expo-router';
 import { Image } from 'expo-image';
 
-export default function ModsScreen() {
+export default function PopModsScreen() {
   const router = useRouter();
   const [search, setSearch] = useState('');
 
   const mods = [
     {
-      id: 'goomba',
-      title: 'Goomba',
-      desc: 'Classic Goomba from the Super Mario series',
-      image: require('../../assets/images/Goomba.png'),
+      id: 'tf2',
+      title: 'Team Fortress 2',
+      desc: 'All your favorite mercenaries from the hit game Team Fortress 2',
+      image: require('../../assets/images/TF2/TF2.png'),
       href: '/(tabs)/app-mods/goomba',
-    },
-    {
-      id: 'bob-omb',
-      title: 'Bob-omb',
-      desc: 'The exploding fiend from the Super Mario series',
-      image: require('../../assets/images/Bob-omb.png'),
-      href: '/(tabs)/app-mods/bob-omb',
-    },
-    {
-      id: 'propellerboy',
-      title: 'Propeller Boy',
-      desc: 'A friendly little flying fellow',
-      image: require('../../assets/images/Propeller.png'),
-      href: '/(tabs)/app-mods/propellerboy',
-    },
-    {
-      id: 'chefronaldo',
-      title: 'Chef Ronaldo',
-      desc: 'A professional chef...I think...',
-      image: require('../../assets/images/Chef.png'),
-      href: '/(tabs)/app-mods/chefronaldo',
-    },
-    {
-      id: 'slimerancher',
-      title: 'Slime Rancher',
-      desc: 'Cute little slimeys that love to bounce around',
-      image: require('../../assets/images/Slime Rancher/Slime Rancher.png'),
-      href: '/(tabs)/app-mods/slimerancher',
-    },
-    {
-      id: 'crazythedeer',
-      title: 'Crazy the Deer',
-      desc: 'One crazy bloody deer who is probably on super steroids',
-      image: require('../../assets/images/Crazy/Crazy.png'),
-      href: '/(tabs)/app-mods/crazythedeer',
-    },
-    {
-      id: 'moose',
-      title: 'Moose',
-      desc: 'A big buff moose who does not take sh*t from no one',
-      image: require('../../assets/images/Crazy/Moose.png'),
-      href: '/(tabs)/app-mods/moose',
-    },
-    {
-      id: 'goatee',
-      title: 'Goatee',
-      desc: 'A goat guy that eats anything and knows how to ram! (Includes Demon Goat Mod)',
-      image: require('../../assets/images/Crazy/Goatee.png'),
-      href: '/(tabs)/app-mods/goatee',
     },
   ];
 
@@ -76,7 +27,7 @@ export default function ModsScreen() {
         <Text style={styles.backText}>← Back</Text>
       </Pressable>
 
-      <Text style={styles.header}>All Mods</Text>
+      <Text style={styles.header}>Popular Mods</Text>
 
       <TextInput
         style={styles.searchBar}
@@ -91,7 +42,8 @@ export default function ModsScreen() {
           <Pressable
             key={mod.id}
             style={styles.card}
-            onPress={() => router.push(mod.href as any)}>
+            onPress={() => router.push(mod.href as any)}
+          >
             <Image source={mod.image} style={styles.cardImage} contentFit="cover" />
             <View style={styles.cardBody}>
               <Text style={styles.cardTitle}>{mod.title}</Text>
@@ -112,7 +64,7 @@ export default function ModsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1cbacf',
+    backgroundColor: '#1ccf43',
     paddingTop: 40,
     paddingHorizontal: 16,
   },

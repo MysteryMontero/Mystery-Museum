@@ -26,7 +26,7 @@ export default function Screen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Pressable onPress={() => router.replace('/(tabs)/mods')} style={styles.backButton}>
+      <Pressable onPress={() => router.back()} style={styles.backButton}>
         <Text style={styles.backText}>← Back to Mods</Text>
       </Pressable>
 
@@ -56,7 +56,8 @@ export default function Screen() {
         This mob is able to walk around, attack certain monsters and can open iron doors.
         If you attack them, they will attack you. There are also baby Goombas that can go
         through small gaps. This mod adds a nostalgic crossover experience for Minecraft
-        players who enjoy the Mario universe. This is the first mod I have ever made and still is the crown jewel.
+        players who enjoy the Mario universe. This is the first mod I have ever made and
+        still is the crown jewel.
       </Text>
 
       <Text style={styles.description}>
