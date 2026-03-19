@@ -40,36 +40,88 @@ export default function Screen() {
       <Image
         source={require('../../assets/images/Country Balls.png')}
         style={styles.mainImage}
-        contentFit="cover"
-        />
+        contentFit="cover"/>
 
       <Text style={styles.sectionTitle}>What is this?</Text>
 
       <Text style={styles.description}>
         Country Balls is a long-term project designed to implement country-like humanoids into Minecraft where they
-        can trade, fight monsters, and even fight each other!
+        can trade, fight monsters, and even fight each other! The idea is make each country unique and reside to their
+        culture as much as possible. Each one will have their own unique weapons, designs, outfits, and biomes to spawn
+        in. They will even have relationships towards each other based on their historical or modern relationships.
       </Text>
 
       <Text style={styles.description}>
-        The plan is to have 20 countries in total. There are also 7 forms for each country ball:
+        There are 7 different forms for each country ball:
       </Text>
 
-      <View style={styles.list}>
-        <Text style={styles.listItem}>• Ball</Text>
-        <Text style={styles.listItem}>• Human</Text>
-        <Text style={styles.listItem}>• Leader</Text>
-        <Text style={styles.listItem}>• Weapon 1</Text>
-        <Text style={styles.listItem}>• Weapon 2</Text>
-        <Text style={styles.listItem}>• Female</Text>
-        <Text style={styles.listItem}>• Tank</Text>
-      </View>
+      <Text style={styles.description}>
+        Ball Form: The first and most common form. Country Balls do not attack, flee, or do anything except wander.
+        They are useless in ball form until they grow up into a new form either through time or by feeding them copper.
+        Ball forms are like children that need to be protected to grow. Attack one of them, and the same country will
+        attack you.
+      </Text>
 
-      <View style={styles.galleryContainer}>
-        <Slideshow images={sliderImages} />
-      </View>
+      <Image
+        source={require('../../assets/images/Country/Canada/Canada Ball.png')}
+        style={styles.minorImage}
+        contentFit="cover"/>
 
       <Text style={styles.description}>
-        Here is the list of countries:
+        Human Form: The most basic form after ball form. Human form is when the country turns humanoid. Some country
+        humans are able to have weapons and attack while other ones flee, depending on the type of country. A player
+        can also trade with country humans similar to villagers. Each country has different wares.
+      </Text>
+
+      <Image
+        source={require('../../assets/images/Country/France/France Human.png')}
+        style={styles.minorImage}
+        contentFit="cover"/>
+
+      <Text style={styles.description}>
+        Leader/Flag Holder Form: The ones that carry flags high and mighty. Leaders are dressed differently compared to
+        the other forms and are the symbol of their country. All of them will melee attack monsters with their flags.
+        Attacking a leader will trigger those of the same country to attack the attacker, similar to the ball form. The
+        best feature to note is the anthem. When a player gives a leader a diamond, they will strike a pose and play their
+        national anthem all the way through. Truly inspiring.
+      </Text>
+
+      <Image
+        source={require('../../assets/images/Country/UK/UK Flag.png')}
+        style={styles.minorImage}
+        contentFit="cover"/>
+
+      <Text style={styles.description}>
+        Anthem Showcase:
+      </Text>
+
+        {Platform.OS === 'web' ? (
+          <iframe
+            width="100%"
+            height="500"
+            src="https://www.youtube.com/embed/gTNMgj5Hdy0"
+            title="Minecraft Demon Goat Mod Showcase"
+            allowFullScreen
+            style={styles.video}
+          />
+        ) : (
+          <WebView
+            source={{ uri: 'https://www.youtube.com/embed/gTNMgj5Hdy0' }}
+            style={styles.video}
+          />
+        )}
+
+      <Text style={styles.description}>
+        Weapon Forms:
+      </Text>
+
+      <Image
+        source={require('../../assets/images/Country/Mexico/Mexico Gun.png')}
+        style={styles.minorImage}
+        contentFit="cover"/>
+
+      <Text style={styles.description}>
+        The plan is to have 20 countries in total. Here is the list of countries:
       </Text>
 
       <View style={styles.list}>
@@ -154,7 +206,12 @@ const styles = StyleSheet.create({
   },
   mainImage: {
     width: '100%',
-    height: '100%',
+    height: 500,
+    marginTop: 20,
+  },
+  minorImage: {
+    width: '50%',
+    height: 300,
     marginTop: 20,
   },
 

@@ -56,7 +56,6 @@ export default function Screen() {
 
       <Text style={styles.title}>Goatee</Text>
 
-
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
