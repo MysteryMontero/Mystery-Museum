@@ -16,12 +16,12 @@ const sliderImages = [
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba",
+      "https://www.mediafire.com/file/hhi0df6nm3u8q59/Country_Balls_Demo.zip/file",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Goomba"
+      "https://www.mediafire.com/file/hhi0df6nm3u8q59/Country_Balls_Demo.zip/file"
     );
   }
 };
@@ -52,14 +52,41 @@ export default function Screen() {
       </Text>
 
       <Text style={styles.description}>
+        The plan is to have 20 countries in total. Here is the list of countries:
+      </Text>
+
+      <View style={styles.list}>
+        <Text style={styles.listItem}>• USA</Text>
+        <Text style={styles.listItem}>• Canada</Text>
+        <Text style={styles.listItem}>• Mexico</Text>
+        <Text style={styles.listItem}>• UK</Text>
+        <Text style={styles.listItem}>• France</Text>
+        <Text style={styles.listItem}>• Spain</Text>
+        <Text style={styles.listItem}>• Japan</Text>
+        <Text style={styles.listItem}>• Australia</Text>
+        <Text style={styles.listItem}>• Italy</Text>
+        <Text style={styles.listItem}>• Russia</Text>
+        <Text style={styles.listItem}>• Brazil</Text>
+        <Text style={styles.listItem}>• China</Text>
+        <Text style={styles.listItem}>• South Korea</Text>
+        <Text style={styles.listItem}>• Germany</Text>
+        <Text style={styles.listItem}>• Sweden</Text>
+        <Text style={styles.listItem}>• Nigeria</Text>
+        <Text style={styles.listItem}>• Egypt</Text>
+        <Text style={styles.listItem}>• Saudi Arabia</Text>
+        <Text style={styles.listItem}>• India</Text>
+        <Text style={styles.listItem}>• Greece</Text>
+      </View>
+
+      <Text style={styles.description}>
         There are 7 different forms for each country ball:
       </Text>
 
       <Text style={styles.description}>
         Ball Form: The first and most common form. Country Balls do not attack, flee, or do anything except wander.
         They are useless in ball form until they grow up into a new form either through time or by feeding them copper.
-        Ball forms are like children that need to be protected to grow. Attack one of them, and the same country will
-        attack you.
+        Ball forms are like children that need to be protected to grow. Attack one of them, and those of the same country
+        will attack you.
       </Text>
 
       <Image
@@ -112,40 +139,57 @@ export default function Screen() {
         )}
 
       <Text style={styles.description}>
-        Weapon Forms:
+        Weapon Forms: These are the guaranteed attackers. Each country has two unique weapon forms, some are range like
+        guns and some are melee weapons like swords. Each country will have their own unique set of weapons, with some of
+        them even having unique outfits corresponding to their weapon.
+      </Text>
+
+      <View style={styles.weaponRow}>
+        <Image
+          source={require('../../assets/images/Country/Mexico/Mexico Gun.png')}
+          style={styles.weaponImage}
+          contentFit="cover"/>
+        <Image
+          source={require('../../assets/images/Country/Japan/Japan Samurai.png')}
+          style={styles.weaponImage}
+          contentFit="cover"/>
+      </View>
+
+      <Text style={styles.description}>
+        Female Form: This was an idea I had later on to include female figures with their own unique
+        outfits as well. They fall into the same category as the human form. You can trade with them as well, though they
+        have the same trade tables as the human forms. It all depends on what the human form does. If the human form can
+        attack, then the females will most likely flee from danger. Though if the humans flee from danger, the females
+        can give support like granting effects to their relative country or fight as well. Attack them, and you will anger
+        those of the same country, same with the leader and ball form.
       </Text>
 
       <Image
-        source={require('../../assets/images/Country/Mexico/Mexico Gun.png')}
+        source={require('../../assets/images/Country/Spain/Spain Female.png')}
         style={styles.minorImage}
         contentFit="cover"/>
 
       <Text style={styles.description}>
-        The plan is to have 20 countries in total. Here is the list of countries:
+        Tank Form: Now this is the best form but also the rarest. The tank form is big and powerful and it would take
+        a lot to defeat one. Tanks have to have at least 100 health and be rideable. Players can ride them too. Each
+        country has their own unique tank that all do something differently, whether it be a castle on wheels, a sumo
+        wrestler, or a big buff moose.
       </Text>
 
-      <View style={styles.list}>
-        <Text style={styles.listItem}>• USA</Text>
-        <Text style={styles.listItem}>• Canada</Text>
-        <Text style={styles.listItem}>• Mexico</Text>
-        <Text style={styles.listItem}>• UK</Text>
-        <Text style={styles.listItem}>• France</Text>
-        <Text style={styles.listItem}>• Spain</Text>
-        <Text style={styles.listItem}>• Japan</Text>
-        <Text style={styles.listItem}>• Australia</Text>
-        <Text style={styles.listItem}>• Italy</Text>
-        <Text style={styles.listItem}>• Russia</Text>
-        <Text style={styles.listItem}>• Brazil</Text>
-        <Text style={styles.listItem}>• China</Text>
-        <Text style={styles.listItem}>• South Korea</Text>
-        <Text style={styles.listItem}>• Germany</Text>
-        <Text style={styles.listItem}>• Sweden</Text>
-        <Text style={styles.listItem}>• Nigeria</Text>
-        <Text style={styles.listItem}>• Egypt</Text>
-        <Text style={styles.listItem}>• Saudi Arabia</Text>
-        <Text style={styles.listItem}>• India</Text>
-        <Text style={styles.listItem}>• Greece</Text>
-      </View>
+      <Image
+        source={require('../../assets/images/Country/USA/USA Tank.png')}
+        style={styles.minorImage}
+        contentFit="cover"/>
+
+      <Text style={styles.description}>
+        Want to check out all the unique tanks? Click below:
+      </Text>
+
+      <Pressable
+        style={styles.downloadButton2}
+        onPress={() => router.push('/(tabs)/tank_models')}>
+        <Text style={styles.downloadText}>View All Tanks</Text>
+      </Pressable>
 
       <Text style={styles.description}>
         Only 7 countries have been made so far: USA, Canada, Mexico, UK, France, Spain, and Japan.
@@ -154,13 +198,15 @@ export default function Screen() {
         of this project. It only includes the first 5 countries.
       </Text>
 
-      <Text style={styles.sectionTitle}>Download</Text>
+      <Text style={styles.sectionTitle}>Download the Demo</Text>
       
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
         <Text style={styles.downloadText}>Download Country Balls Demo ZIP</Text>
       </Pressable>
+
+
     </ScrollView>
   );
 }
@@ -214,6 +260,17 @@ const styles = StyleSheet.create({
     height: 300,
     marginTop: 20,
   },
+  weaponRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginTop: 20,
+  },
+  weaponImage: {
+    width: '48%',
+    height: 300,
+    borderRadius: 10,
+  },
 
   sectionTitle: {
     fontSize: 36,
@@ -237,6 +294,15 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 20,
     backgroundColor: '#000000',
+    borderRadius: 12,
+    alignSelf: 'flex-start',
+  },
+
+  downloadButton2: {
+    marginTop: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    backgroundColor: '#ff0000',
     borderRadius: 12,
     alignSelf: 'flex-start',
   },
