@@ -13,7 +13,7 @@ export default function PopModsScreen() {
       title: 'Team Fortress 2',
       desc: 'All your favorite mercenaries from the hit game Team Fortress 2',
       image: require('../../assets/images/TF2/TF2.png'),
-      href: '/(tabs)/app-mods/goomba',
+      href: '/(tabs)/app-mods/tf2',
     },
   ];
 
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   cardGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 16,
+    gap: 50,
     paddingLeft: 40,
   },
 

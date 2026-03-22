@@ -64,6 +64,20 @@ export default function ModsScreen() {
       image: require('../../assets/images/Crazy/Goatee.png'),
       href: '/(tabs)/app-mods/goatee',
     },
+    {
+      id: 'tf2',
+      title: 'Team Fortress 2',
+      desc: 'All your favorite mercenaries from the hit game Team Fortress 2',
+      image: require('../../assets/images/TF2/TF2.png'),
+      href: '/(tabs)/app-mods/tf2',
+    },
+    {
+      id: 'fnaf',
+      title: 'Five Nights at Freddys',
+      desc: 'The spooky teddy bear and his not at all dangerous robot buddies',
+      image: require('../../assets/images/Fnaf/Fnaf.png'),
+      href: '/(tabs)/app-mods/tf2',
+    },
   ];
 
   const filteredMods = mods.filter((mod) =>
@@ -156,7 +170,7 @@ const styles = StyleSheet.create({
   cardGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 16,
+    gap: 50,
     paddingLeft: 40,
   },
 
