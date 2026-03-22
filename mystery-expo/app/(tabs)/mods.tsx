@@ -76,7 +76,14 @@ export default function ModsScreen() {
       title: 'Five Nights at Freddys',
       desc: 'The spooky teddy bear and his not at all dangerous robot buddies',
       image: require('../../assets/images/Fnaf/Fnaf.png'),
-      href: '/(tabs)/app-mods/tf2',
+      href: '/(tabs)/app-mods/fnaf',
+    },
+    {
+      id: 'fnaf2',
+      title: 'Five Nights at Freddys 2',
+      desc: 'The second spooky teddy bear and his robot buddies made of plastic',
+      image: require('../../assets/images/Fnaf/Fnaf2.png'),
+      href: '/(tabs)/app-mods/fnaf2',
     },
   ];
 
