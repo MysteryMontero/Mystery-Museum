@@ -31,7 +31,7 @@ export default function Screen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Pressable onPress={() => router.replace('/(tabs)/mods')} style={styles.backButton}>
+      <Pressable onPress={() => router.back()} style={styles.backButton}>
         <Text style={styles.backText}>← Back to Mods</Text>
       </Pressable>
 

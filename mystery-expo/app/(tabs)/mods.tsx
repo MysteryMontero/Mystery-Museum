@@ -85,6 +85,27 @@ export default function ModsScreen() {
       image: require('../../assets/images/Fnaf/Fnaf2.png'),
       href: '/(tabs)/app-mods/fnaf2',
     },
+    {
+      id: 'moomoo',
+      title: 'Sexy Moo Moo',
+      desc: 'Trust me its not what you think',
+      image: require('../../assets/images/MooMoo2.png'),
+      href: '/(tabs)/app-mods/moomoo',
+    },
+    {
+      id: 'slender',
+      title: 'Slender Man',
+      desc: 'Creepy figure who roams in the forest at night',
+      image: require('../../assets/images/Slender Man.png'),
+      href: '/(tabs)/app-mods/slender',
+    },
+    {
+      id: 'ruckus',
+      title: 'Ruckus Rhino',
+      desc: 'The first boss I have ever made',
+      image: require('../../assets/images/Ruckus10.png'),
+      href: '/(tabs)/app-mods/ruckus',
+    },
   ];
 
   const filteredMods = mods.filter((mod) =>

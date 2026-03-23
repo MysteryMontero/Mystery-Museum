@@ -39,7 +39,7 @@ export default function Screen() {
           width="100%"
           height="350"
           src="https://www.youtube.com/embed/3kyENDB-vA4"
-          title="Minecraft Five Nights at Freddys Mod Showcase"
+          title="Minecraft Five Nights at Freddys 2 Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
@@ -169,7 +169,8 @@ export default function Screen() {
       
       <View style={styles.teamRow}>
         <Text style={styles.teamDescription}>
-          Puppet is like a music box. Watch her, and if she moves a little, wind her back.
+          Puppet is like a music box. Watch her, and if she moves a little, wind her back. If she fully stands up, its
+          game over!
         </Text>
       
         <Image

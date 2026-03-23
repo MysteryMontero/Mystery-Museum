@@ -4,21 +4,21 @@ import { WebView } from 'react-native-webview';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
-  require('../../../assets/images/Crazy/Moose.png'),
-  require('../../../assets/images/Crazy/Moose2.png'),
-  require('../../../assets/images/Crazy/Moose3.png'),
-  require('../../../assets/images/Crazy/Moose4.png'),
+  require('../../../assets/images/Slender Man.png'),
+  require('../../../assets/images/Slender Man2.png'),
+  require('../../../assets/images/Slender Man3.png'),
+  require('../../../assets/images/Slender Man4.png'),
 ];
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
     window.open(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose",
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slender",
       "_blank"
     );
   } else {
     Linking.openURL(
-      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Moose"
+      "https://github.com/MysteryMontero/Mystery-Museum/releases/tag/Slender"
     );
   }
 };
@@ -36,45 +36,42 @@ export default function Screen() {
         <iframe
           width="100%"
           height="350"
-          src="https://www.youtube.com/embed/U8rhxe50waM"
-          title="Minecraft Moose Mod Showcase"
+          src="https://www.youtube.com/embed/CUYYdpO7_vE"
+          title="Minecraft Slender Man Mod Showcase"
           allowFullScreen
           style={styles.video}
         />
       ) : (
         <WebView
-          source={{ uri: 'https://www.youtube.com/embed/U8rhxe50waM' }}
+          source={{ uri: 'https://www.youtube.com/embed/CUYYdpO7_vE' }}
           style={styles.video}
         />
       )}
 
-      <Text style={styles.title}>Moose</Text>
+      <Text style={styles.title}>Slender Man</Text>
 
 
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        Moose, Crazy's best friend that probably weighs over 400 pounds. This giant muscle of a moose will not take crud
-        from nobody. If you know any better, don't mess with him, and especially don't mess with his best friend Crazy
-        the Deer while he's around!
+        The classic horror figure; Slender Man. Despite this being a small mod, it was very popular to the public audience.
+        Turns out he is a lot scarier than I initially thought just based on my friend's reactions. Slender Man is a mod
+        you want to avoid at all costs. He mainly roams in the forest at night. You will know he is near when you hear his
+        theme music play. He acts very similar to an Endermen. Look him in the eye and he will chase after you with tremendous
+        speed and blind your vision too. He will insta-kill you if he catches you. He can also teleport like an Endermen.
       </Text>
 
       <Text style={styles.description}>
-        This mod summons a Moose. They will not attack you unless you attack them or a Crazy. Like Crazy, you can feed
-        him carrots and potatoes (Note: Mob grieving must be on). You can also ride on his back. You can't control him
-        but he's a nice safeguard from monsters. There are also baby Moose who are just as tough. Do not let their
-        cuteness fool you!
+        There are baby versions of him as well, which are way worse. They are faster and because they are so small, they
+        meet your eye level, making them very dangerous. Slender Man has another secret skin too.
       </Text>
 
       <Text style={styles.description}>
-        The Crazy the Deer mod is not necessary for this mod but this mod does interact with Crazy.
-      </Text>
-
-      <Text style={styles.description}>
-        To access the file, extract the zip. Go into MooseX folder, then go into builds and select MooseX.mcaddon.
-        Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want
-        to put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior
-        packs and resource packs and activate the mob from there. It should appear in your world now and have a spawn egg.
+        To access the file, extract the zip. Go into Slender Man folder, then go into builds and select Slender Man.mcaddon.
+        Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want to
+        put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior packs
+        and resource packs and activate the mob from there. They should appear in the forest at night and you should have a
+        spawn egg.
       </Text>
 
       <Text style={styles.description}>
@@ -86,7 +83,7 @@ export default function Screen() {
       <Pressable
         onPress={downloadMod}
         style={styles.downloadButton}>
-        <Text style={styles.downloadText}>Download Moose ZIP</Text>
+        <Text style={styles.downloadText}>Download Slender Man ZIP</Text>
       </Pressable>
 
       <Text style={styles.galleryTitle}>Gallery</Text>

@@ -15,6 +15,13 @@ export default function PopModsScreen() {
       image: require('../../assets/images/TF2/TF2.png'),
       href: '/(tabs)/app-mods/tf2',
     },
+    {
+      id: 'slender',
+      title: 'Slender Man',
+      desc: 'Creepy figure who roams in the forest at night',
+      image: require('../../assets/images/Slender Man.png'),
+      href: '/(tabs)/app-mods/slender',
+    },
   ];
 
   const filteredMods = mods.filter((mod) =>
@@ -113,7 +120,7 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    width: '30%',
+    width: '100%',
     backgroundColor: 'rgba(0,0,0,0.25)',
     borderRadius: 18,
     overflow: 'hidden',
@@ -121,7 +128,7 @@ const styles = StyleSheet.create({
 
   cardImage: {
     width: '100%',
-    height: 300,
+    height: 500,
   },
 
   cardBody: {
