@@ -60,24 +60,16 @@ export default function Screen() {
       <Text style={styles.sectionTitle}>Description</Text>
 
       <Text style={styles.description}>
-        The classic horror figure; Slender Man. Despite this being a small mod, it was very popular to the public audience.
-        Turns out he is a lot scarier than I initially thought just based on my friend's reactions. Slender Man is a mod
-        you want to avoid at all costs. He mainly roams in the forest at night. You will know he is near when you hear his
-        theme music play. He acts very similar to an Endermen. Look him in the eye and he will chase after you with tremendous
-        speed and blind your vision too. He will insta-kill you if he catches you. He can also teleport like an Endermen.
+        Ruckus Rhino, the first and only boss mod I have ever made so far. This giant beast didn't like the way you looked
+        at him, and now he's gonna pummel you to the ground!
       </Text>
 
       <Text style={styles.description}>
-        There are baby versions of him as well, which are way worse. They are faster and because they are so small, they
-        meet your eye level, making them very dangerous. Slender Man has another secret skin too.
-      </Text>
-
-      <Text style={styles.description}>
-        To access the file, extract the zip. Go into Slender Man folder, then go into builds and select Slender Man.mcaddon.
+        To access Ruckus file, extract the zip. Go into RuckusX folder, then go into builds and select RuckusX.mcaddon.
         Remember you need to have Minecraft Bedrock installed for this to work. Open Minecraft, go to a world you want to
-        put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior packs
-        and resource packs and activate the mob from there. They should appear in the forest at night and you should have a
-        spawn egg.
+        put the mob in and click on the pencil button to the right of your world to enter it's settings. Go to behavior
+        packs and resource packs and activate the mob from there. He should appear in the snowy biomes and you should have
+        a spawn egg.
       </Text>
 
       <Text style={styles.description}>
