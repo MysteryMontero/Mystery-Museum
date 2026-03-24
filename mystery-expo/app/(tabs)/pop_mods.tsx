@@ -22,6 +22,13 @@ export default function PopModsScreen() {
       image: require('../../assets/images/Slender Man.png'),
       href: '/(tabs)/app-mods/slender',
     },
+    {
+      id: 'southpark',
+      title: 'South Park',
+      desc: 'Come on down to South Park and see some friends of mine',
+      image: require('../../assets/images/South Park/South Park.png'),
+      href: '/(tabs)/app-mods/southpark',
+    },
   ];
 
   const filteredMods = mods.filter((mod) =>

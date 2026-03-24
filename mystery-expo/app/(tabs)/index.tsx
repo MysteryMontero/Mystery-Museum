@@ -16,7 +16,7 @@ export default function HomeScreen() {
     Animated.loop(
       Animated.timing(colorAnim, {
         toValue: 1,
-        duration: 2000,
+        duration: 3000,
         easing: Easing.linear,
         useNativeDriver: false,
       })
@@ -34,7 +34,7 @@ export default function HomeScreen() {
 const sliderImages = [
   require('../../assets/images/TF2/TF2 Kazotsky Kick.png'),
   require('../../assets/images/Danganronpa Trial.png'),
-  require('../../assets/images/South Park.png'),
+  require('../../assets/images/South Park/South Park.png'),
   require('../../assets/images/Country Balls.png'),
   require('../../assets/images/Vanoss Crew.png'),
 ];
@@ -147,7 +147,7 @@ useEffect(() => {
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/South Park 2.png')}
+        source={require('../../assets/images//South Park/South Park10.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
