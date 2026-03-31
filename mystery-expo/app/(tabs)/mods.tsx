@@ -113,6 +113,27 @@ export default function ModsScreen() {
       image: require('../../assets/images/South Park/South Park.png'),
       href: '/(tabs)/app-mods/southpark',
     },
+    {
+      id: 'danganronpa',
+      title: 'Danganronpa',
+      desc: 'A group of horny students and an evil teddy bear make the stage',
+      image: require('../../assets/images/Danganronpa/Danganronpa.png'),
+      href: '/(tabs)/app-mods/danganronpa',
+    },
+    {
+      id: 'country_mods',
+      title: 'Country Balls',
+      desc: 'Countries come to life! Check out the Country Ball Page',
+      image: require('../../assets/images/Country Balls.png'),
+      href: '/(tabs)/country_mods',
+    },
+    {
+      id: 'headcrab',
+      title: 'Headcrab',
+      desc: 'The creepy crawly from Half-Life that is addicted to heads',
+      image: require('../../assets/images/Headcrab.png'),
+      href: '/(tabs)/app-mods/headcrab',
+    },
   ];
 
   const filteredMods = mods.filter((mod) =>

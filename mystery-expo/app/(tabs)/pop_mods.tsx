@@ -16,18 +16,25 @@ export default function PopModsScreen() {
       href: '/(tabs)/app-mods/tf2',
     },
     {
-      id: 'slender',
-      title: 'Slender Man',
-      desc: 'Creepy figure who roams in the forest at night',
-      image: require('../../assets/images/Slender Man.png'),
-      href: '/(tabs)/app-mods/slender',
-    },
-    {
       id: 'southpark',
       title: 'South Park',
       desc: 'Come on down to South Park and see some friends of mine',
       image: require('../../assets/images/South Park/South Park.png'),
       href: '/(tabs)/app-mods/southpark',
+    },
+    {
+      id: 'danganronpa',
+      title: 'Danganronpa',
+      desc: 'A group of horny students and an evil teddy bear make the stage',
+      image: require('../../assets/images/Danganronpa/Danganronpa.png'),
+      href: '/(tabs)/app-mods/danganronpa',
+    },
+    {
+      id: 'slender',
+      title: 'Slender Man',
+      desc: 'Creepy figure who roams in the forest at night',
+      image: require('../../assets/images/Slender Man.png'),
+      href: '/(tabs)/app-mods/slender',
     },
   ];
 

@@ -33,7 +33,7 @@ export default function HomeScreen() {
 
 const sliderImages = [
   require('../../assets/images/TF2/TF2 Kazotsky Kick.png'),
-  require('../../assets/images/Danganronpa Trial.png'),
+  require('../../assets/images/Danganronpa/Danganronpa.png'),
   require('../../assets/images/South Park/South Park.png'),
   require('../../assets/images/Country Balls.png'),
   require('../../assets/images/Vanoss Crew.png'),
