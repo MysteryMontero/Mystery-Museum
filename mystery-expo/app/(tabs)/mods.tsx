@@ -123,7 +123,7 @@ export default function ModsScreen() {
     {
       id: 'country_mods',
       title: 'Country Balls',
-      desc: 'Countries come to life! Check out the Country Ball Page',
+      desc: 'Countries come to life! Check out the Country Balls page',
       image: require('../../assets/images/Country Balls.png'),
       href: '/(tabs)/country_mods',
     },
@@ -133,6 +133,13 @@ export default function ModsScreen() {
       desc: 'The creepy crawly from Half-Life that is addicted to heads',
       image: require('../../assets/images/Headcrab.png'),
       href: '/(tabs)/app-mods/headcrab',
+    },
+    {
+      id: 'vanoss',
+      title: 'Vanoss Crew',
+      desc: 'The OG YouTube Gang',
+      image: require('../../assets/images/Vanoss/Vanoss Crew.png'),
+      href: '/(tabs)/app-mods/vanoss',
     },
   ];
 

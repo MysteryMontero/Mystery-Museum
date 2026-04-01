@@ -16,6 +16,13 @@ export default function PopModsScreen() {
       href: '/(tabs)/app-mods/tf2',
     },
     {
+      id: 'vanoss',
+      title: 'Vanoss Crew',
+      desc: 'Back when YouTube was funny we had these guys',
+      image: require('../../assets/images/Vanoss/Vanoss Crew.png'),
+      href: '/(tabs)/app-mods/vanoss',
+    },
+    {
       id: 'southpark',
       title: 'South Park',
       desc: 'Come on down to South Park and see some friends of mine',
@@ -28,13 +35,6 @@ export default function PopModsScreen() {
       desc: 'A group of horny students and an evil teddy bear make the stage',
       image: require('../../assets/images/Danganronpa/Danganronpa.png'),
       href: '/(tabs)/app-mods/danganronpa',
-    },
-    {
-      id: 'slender',
-      title: 'Slender Man',
-      desc: 'Creepy figure who roams in the forest at night',
-      image: require('../../assets/images/Slender Man.png'),
-      href: '/(tabs)/app-mods/slender',
     },
   ];
 

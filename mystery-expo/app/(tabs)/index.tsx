@@ -36,7 +36,7 @@ const sliderImages = [
   require('../../assets/images/Danganronpa/Danganronpa.png'),
   require('../../assets/images/South Park/South Park.png'),
   require('../../assets/images/Country Balls.png'),
-  require('../../assets/images/Vanoss Crew.png'),
+  require('../../assets/images/Vanoss/Vanoss Crew.png'),
 ];
 
 const [slideIndex, setSlideIndex] = useState(0);
@@ -122,7 +122,7 @@ useEffect(() => {
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/Vanoss Crew 2.png')}
+        source={require('../../assets/images/MooMoo2.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
@@ -147,12 +147,12 @@ useEffect(() => {
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images//South Park/South Park10.png')}
+        source={require('../../assets/images/Vanoss/Vanoss Crew2.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/Slender Man.png')}
+        source={require('../../assets/images/South Park/South Park10.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
@@ -167,12 +167,12 @@ useEffect(() => {
 
     <View style={styles.previewRow}>
       <Image
-        source={require('../../assets/images/Country/Country.png')}
+        source={require('../../assets/images/Country/Country2.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
       <Image
-        source={require('../../assets/images/Country/Country2.png')}
+        source={require('../../assets/images/Country/Country.png')}
         style={styles.previewImage}
         contentFit="cover"
       />
