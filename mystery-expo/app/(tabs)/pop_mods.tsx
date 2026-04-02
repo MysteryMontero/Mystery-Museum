@@ -18,7 +18,7 @@ export default function PopModsScreen() {
     {
       id: 'vanoss',
       title: 'Vanoss Crew',
-      desc: 'Back when YouTube was funny we had these guys',
+      desc: 'The OG YouTube Gang',
       image: require('../../assets/images/Vanoss/Vanoss Crew.png'),
       href: '/(tabs)/app-mods/vanoss',
     },
@@ -32,7 +32,7 @@ export default function PopModsScreen() {
     {
       id: 'danganronpa',
       title: 'Danganronpa',
-      desc: 'A group of horny students and an evil teddy bear make the stage',
+      desc: 'A group of talented students and an evil teddy bear make the stage',
       image: require('../../assets/images/Danganronpa/Danganronpa.png'),
       href: '/(tabs)/app-mods/danganronpa',
     },

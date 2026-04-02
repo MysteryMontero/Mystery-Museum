@@ -212,6 +212,23 @@ useEffect(() => {
   </Pressable>
 </Link>
 
+<Link href="/(tabs)/mod_roulette" asChild>
+  <Pressable style={styles.card}>
+    <Text style={styles.cardTitle}>Spin The Wheel</Text>
+    <Text style={styles.cardSub}>
+      Don't want to pick? Have a spin and let fate choose for you instead!
+    </Text>
+
+    <View style={styles.previewRow}>
+      <Image
+        source={require('../../assets/images/Vanoss/Vanoss Crew18.png')}
+        style={styles.previewImage2}
+        contentFit="cover"
+      />
+    </View>
+  </Pressable>
+</Link>
+
       <View style={{ height: 600 }} />
     </ScrollView>
   );
@@ -232,7 +249,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 60,
     fontWeight: 'bold',
-    color: '#ffffff',
     letterSpacing: 3,
     textTransform: 'uppercase',
     textShadowColor: '#8a2be2',
@@ -265,7 +281,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 500,
   },
-
 
   // Slides
   sliderWrap: {
@@ -321,6 +336,12 @@ const styles = StyleSheet.create({
 
   previewImage: {
     width: '32%',
+    height: 300,
+    borderRadius: 10,
+  },
+
+  previewImage2: {
+    width: '100%',
     height: 300,
     borderRadius: 10,
   },

@@ -25,6 +25,36 @@ const downloadMod = () => {
   }
 };
 
+
+
+const downloadMod2 = () => {
+  if (Platform.OS === "web") {
+    window.open(
+      "https://www.mediafire.com/file/orp2aj5bon4q0q6/Spain_Ball.zip/file",
+      "_blank"
+    );
+  } else {
+    Linking.openURL(
+      "https://www.mediafire.com/file/orp2aj5bon4q0q6/Spain_Ball.zip/file"
+    );
+  }
+};
+
+
+
+const downloadMod3 = () => {
+  if (Platform.OS === "web") {
+    window.open(
+      "https://www.mediafire.com/file/fuk99iwr55u1w45/Japan_Ball.zip/file",
+      "_blank"
+    );
+  } else {
+    Linking.openURL(
+      "https://www.mediafire.com/file/fuk99iwr55u1w45/Japan_Ball.zip/file"
+    );
+  }
+};
+
 export default function Screen() {
   const router = useRouter();
 
@@ -180,8 +210,12 @@ export default function Screen() {
         style={styles.minorImage}
         contentFit="cover"/>
 
-      <Text style={styles.description}>
-        Want to check out all the unique tanks? Click below:
+      <Text style={styles.description3}>
+        Want to check out all the unique tanks?
+      </Text>
+
+      <Text style={styles.description3}>
+        Click Below:
       </Text>
 
       <Pressable
@@ -190,11 +224,12 @@ export default function Screen() {
         <Text style={styles.downloadText}>View All Tanks</Text>
       </Pressable>
 
-      <Text style={styles.description}>
+      <Text style={styles.description2}>
         Only 7 countries have been made so far: USA, Canada, Mexico, UK, France, Spain, and Japan.
         They are constantly being updated as well. Australia and Italy are currently in development.
         I'm not even half-way done, which is why it's a long-term project. You can try out the demo
-        of this project. It only includes the first 5 countries.
+        of this project. It only includes the first 5 countries. All countries will be updated in
+        the future.
       </Text>
 
       <Text style={styles.sectionTitle}>Download the Demo</Text>
@@ -205,6 +240,25 @@ export default function Screen() {
         <Text style={styles.downloadText}>Download Country Balls Demo ZIP</Text>
       </Pressable>
 
+      <Text style={styles.description2}>
+        Spain and Japan are not part of the demo. They are currently separate mods that will also be updated in the future.
+      </Text>
+
+      <Text style={styles.sectionTitle}>Download Spain</Text>
+
+      <Pressable
+        onPress={downloadMod2}
+        style={styles.downloadButton}>
+        <Text style={styles.downloadText}>Download Spain ZIP</Text>
+      </Pressable>
+
+      <Text style={styles.sectionTitle}>Download Japan</Text>
+
+      <Pressable
+        onPress={downloadMod3}
+        style={styles.downloadButton}>
+        <Text style={styles.downloadText}>Download Japan ZIP</Text>
+      </Pressable>
 
     </ScrollView>
   );
@@ -288,6 +342,24 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
 
+  description2: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 50,
+    lineHeight: 40,
+    alignSelf: 'flex-start',
+  },
+
+  description3: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 0,
+    lineHeight: 40,
+    alignSelf: 'center',
+  },
+
   downloadButton: {
     marginTop: 12,
     paddingVertical: 12,
@@ -301,9 +373,9 @@ const styles = StyleSheet.create({
     marginTop: 12,
     paddingVertical: 12,
     paddingHorizontal: 20,
-    backgroundColor: '#ff0000',
+    backgroundColor: '#000000',
     borderRadius: 12,
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
   },
 
   downloadText: {

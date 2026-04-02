@@ -116,7 +116,7 @@ export default function ModsScreen() {
     {
       id: 'danganronpa',
       title: 'Danganronpa',
-      desc: 'A group of horny students and an evil teddy bear make the stage',
+      desc: 'A group of talented students and an evil teddy bear make the stage',
       image: require('../../assets/images/Danganronpa/Danganronpa.png'),
       href: '/(tabs)/app-mods/danganronpa',
     },
@@ -154,6 +154,13 @@ export default function ModsScreen() {
       </Pressable>
 
       <Text style={styles.header}>All Mods</Text>
+
+      <Pressable
+      style={styles.rouletteButton}
+      onPress={() => router.push('/(tabs)/mod_roulette' as any)}>
+
+      <Text style={styles.rouletteButtonText}>🎲 Spin The Wheel!</Text>
+      </Pressable>
 
       <TextInput
         style={styles.searchBar}
@@ -277,5 +284,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#fff',
+  },
+
+  rouletteButton: {
+    alignSelf: 'center',
+    backgroundColor: '#000000',
+    paddingVertical: 12,
+    paddingHorizontal: 22,
+    borderRadius: 12,
+    marginBottom: 18,
+  },
+
+  rouletteButtonText: {
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
