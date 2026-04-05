@@ -185,7 +185,7 @@ useEffect(() => {
   </Pressable>
 </Link>
 
-<Link href="/(tabs)/mods" asChild>
+<Link href="/(tabs)/future_mods" asChild>
   <Pressable style={styles.card}>
     <Text style={styles.cardTitle}>Future Projects</Text>
     <Text style={styles.cardSub}>Have a sneak peak at some mods that are still in development
