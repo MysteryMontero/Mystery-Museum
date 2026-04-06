@@ -214,7 +214,7 @@ useEffect(() => {
 
 <Link href="/(tabs)/mod_roulette" asChild>
   <Pressable style={styles.card}>
-    <Text style={styles.cardTitle}>Spin The Wheel</Text>
+    <Text style={styles.cardTitle}>Mod Roulette</Text>
     <Text style={styles.cardSub}>
       Don't want to pick? Have a spin and let fate choose for you instead!
     </Text>

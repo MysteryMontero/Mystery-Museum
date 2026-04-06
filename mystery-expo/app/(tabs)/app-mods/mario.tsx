@@ -13,9 +13,14 @@ const sliderImages = [
   require('../../../assets/images/Mario Fludd.png'),
 ];
 
+const sliderImages2 = [
+  require('../../../assets/images/Super Mushroom.png'),
+  require('../../../assets/images/Fire Flower.png'),
+  require('../../../assets/images/Question Box.png'),
+];
+
 export default function Screen() {
   const router = useRouter();
-
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Pressable onPress={() => router.back()} style={styles.backButton}>
@@ -38,10 +43,61 @@ export default function Screen() {
         comes with power-ups which transform Mario into different forms.
       </Text>
 
+      <Text style={styles.description2}>
+        Mario is able to attack monsters with 3 different attacks: Melee, Stomp, and Hammer:
+      </Text>
+
+      <Text style={styles.description2}>
+        Melee: Mario fights with moves based off Mario 64. 
+      </Text>
+
+      <Text style={styles.description2}>
+        Stomp: Mario jumps in the air and lands on an enemy's head, dealing massive damage.
+      </Text>
+
+      <Text style={styles.description2}>
+        Hammer: Mario attacks with his iconic hammer from the Mario RPG series which attacks and launches enemies high
+        in the sky.
+      </Text>
+
+      <Text style={styles.sectionTitle}>Items</Text>
+
+      <Text style={styles.description}>
+        There are three items to give Mario:
+      </Text>
+
+      <Text style={styles.description}>
+        Super Mushroom: When Mario is small, giving a mushroom makes him big again. Eating a mushroom will make the
+        player dizzy for a short time.
+      </Text>
+
+      <Text style={styles.description2}>
+        Fire Flower: Giving Mario a fire flower turns him into Fire Mario. Mario is stronger and can shoot bouncing
+        fireballs at enemies. Eating a fire flower will set the player on fire.
+      </Text>
+
+      <Text style={styles.description2}>
+        Question Box: Giving Mario a question mark box gives him the Fludd pack. Mario can spray foes away with rapid
+        water.
+      </Text>
+
+      <Text style={styles.sectionTitle}>Future</Text>
+
+      <Text style={styles.description}>
+        Besides Mario, more Mario characters will be added to Minecraft as well. Luigi, Peach, Daisy, Bowser, Wario,
+        Waluigi, Yoshi, Toad, Donkey Kong, and more. All of them will have unique attacks and special forms.
+      </Text>
+
       <Text style={styles.galleryTitle}>Gallery</Text>
 
       <View style={styles.galleryContainer}>
         <Slideshow images={sliderImages} />
+      </View>
+
+      <Text style={styles.galleryTitle2}>Items</Text>
+
+      <View style={styles.galleryContainer2}>
+        <Slideshow images={sliderImages2} />
       </View>
     </ScrollView>
   );
@@ -57,7 +113,7 @@ export default function Screen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#b1b1b1',
   },
   content: {
     paddingTop: 40,
@@ -120,24 +176,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
 
-  description3: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000000',
-    marginTop: 0,
-    lineHeight: 22,
-    alignSelf: 'flex-start',
-  },
-
-  downloadButton: {
-    marginTop: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    backgroundColor: '#000000',
-    borderRadius: 12,
-    alignSelf: 'flex-start',
-  },
-
   galleryTitle: {
     fontSize: 32,
     fontWeight: 'bold',
@@ -148,6 +186,21 @@ const styles = StyleSheet.create({
   },
 
   galleryContainer: {
+    width: '100%',
+    height: '10%',
+    marginTop: 10,
+  },
+
+  galleryTitle2: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginTop: 500,
+    textAlign: 'center',
+    width: '100%',
+  },
+
+  galleryContainer2: {
     width: '100%',
     height: '10%',
     marginTop: 10,

@@ -34,14 +34,14 @@ export default function FutureModsScreen() {
       title: 'Danganronpa 2',
       desc: 'The sequel to Danganronpa',
       image: require('../../assets/images/Danganronpa/Monomi.png'),
-      href: '/(tabs)/app-mods/danganronpa',
+      href: '/(tabs)/app-mods/danganronpa2',
     },
     {
       id: 'cartoon',
       title: 'Cartoon Network',
       desc: 'Iconic characters from the Cartoon Network TV broadcast station',
       image: require('../../assets/images/Johnny Bravo.png'),
-      href: '/(tabs)/app-mods/danganronpa',
+      href: '/(tabs)/app-mods/cartoon',
     },
   ];
 
@@ -96,7 +96,7 @@ export default function FutureModsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#b1b1b1',
     paddingTop: 40,
     paddingHorizontal: 16,
   },
