@@ -1,11 +1,18 @@
-import { useState } from 'react';
-import { StyleSheet, View, Text, Pressable, ScrollView, TextInput } from 'react-native';
+import { StyleSheet, View, Text, Pressable, ScrollView, TextInput, Platform, Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Image } from 'expo-image';
+import { useState } from 'react';
 
 export default function ModsScreen() {
   const router = useRouter();
   const [search, setSearch] = useState('');
+
+  const { width } = Dimensions.get('window');
+  const isMobile = Platform.OS !== 'web';
+
+  const cardWidth = isMobile ? '92%' : width > 1200 ? '30%' : '45%';
+  const searchWidth = isMobile ? '90%' : '60%';
+  const cardImageHeight = isMobile ? 240 : 320;
 
   const mods = [
     {
@@ -163,20 +170,25 @@ export default function ModsScreen() {
       </Pressable>
 
       <TextInput
-        style={styles.searchBar}
+        style={[styles.searchBar, { width: searchWidth }]}
         placeholder="Search mods..."
         placeholderTextColor="rgba(255,255,255,0.7)"
         value={search}
         onChangeText={setSearch}
       />
 
-      <View style={styles.cardGrid}>
+      <View style={[styles.cardGrid, isMobile ? styles.cardGridMobile : styles.cardGridWeb]}>
         {filteredMods.map((mod) => (
-          <Pressable
-            key={mod.id}
-            style={styles.card}
-            onPress={() => router.push(mod.href as any)}>
-            <Image source={mod.image} style={styles.cardImage} contentFit="cover" />
+            <Pressable
+              key={mod.id}
+              style={[styles.card, { width: cardWidth }]}
+              onPress={() => router.push(mod.href as any)}
+            >
+            <Image
+              source={mod.image}
+              style={[styles.cardImage, { height: cardImageHeight }]}
+              contentFit="cover"
+            />
             <View style={styles.cardBody}>
               <Text style={styles.cardTitle}>{mod.title}</Text>
               <Text style={styles.cardDesc}>{mod.desc}</Text>
@@ -238,14 +250,22 @@ const styles = StyleSheet.create({
   },
 
   cardGrid: {
+    width: '100%',
+  },
+
+  cardGridMobile: {
+    alignItems: 'center',
+    gap: 20,
+  },
+
+  cardGridWeb: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 50,
-    paddingLeft: 40,
+    justifyContent: 'center',
+    gap: 24,
   },
 
   card: {
-    width: '30%',
     backgroundColor: 'rgba(0,0,0,0.25)',
     borderRadius: 18,
     overflow: 'hidden',
@@ -253,7 +273,7 @@ const styles = StyleSheet.create({
 
   cardImage: {
     width: '100%',
-    height: 300,
+    height: 500,
   },
 
   cardBody: {

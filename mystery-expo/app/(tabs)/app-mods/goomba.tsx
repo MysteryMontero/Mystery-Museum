@@ -1,8 +1,7 @@
 import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
-import { WebView } from 'react-native-webview';
-import Slideshow from '@/components/Slideshow';
 import * as WebBrowser from 'expo-web-browser';
+import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
   require('../../../assets/images/Goomba.png'),

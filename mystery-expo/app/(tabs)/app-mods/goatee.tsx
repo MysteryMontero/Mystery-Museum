@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
-import { WebView } from 'react-native-webview';
+import * as WebBrowser from 'expo-web-browser';
 import Slideshow from '@/components/Slideshow';
 
 const sliderImages = [
@@ -15,6 +15,26 @@ const sliderImages2 = [
   require('../../../assets/images/Crazy/Demon3.png'),
   require('../../../assets/images/Crazy/Demon4.png'),
 ];
+
+const openVideo = async () => {
+  const url = 'https://www.youtube.com/watch?v=i4BfNF4Iots';
+
+  if (Platform.OS === 'web') {
+    window.open(url, '_blank');
+  } else {
+    await WebBrowser.openBrowserAsync(url);
+  }
+};
+
+const openVideo2 = async () => {
+  const url = 'https://www.youtube.com/watch?v=T74moU3Grh4';
+
+  if (Platform.OS === 'web') {
+    window.open(url, '_blank');
+  } else {
+    await WebBrowser.openBrowserAsync(url);
+  }
+};
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
@@ -48,10 +68,9 @@ export default function Screen() {
           style={styles.video}
         />
       ) : (
-        <WebView
-          source={{ uri: 'https://www.youtube.com/embed/i4BfNF4Iots' }}
-          style={styles.video}
-        />
+        <Pressable onPress={openVideo} style={styles.videoButton}>
+          <Text style={styles.videoButtonText}>Watch Showcase Video</Text>
+        </Pressable>
       )}
 
       <Text style={styles.title}>Goatee</Text>
@@ -117,10 +136,9 @@ export default function Screen() {
           style={styles.video2}
         />
       ) : (
-        <WebView
-          source={{ uri: 'https://www.youtube.com/embed/T74moU3Grh4' }}
-          style={styles.video2}
-        />
+        <Pressable onPress={openVideo2} style={styles.videoButton}>
+          <Text style={styles.videoButtonText}>Watch Showcase Video</Text>
+        </Pressable>
       )}
 
       <Text style={styles.title}>Demon Goat</Text>
@@ -186,6 +204,19 @@ const styles = StyleSheet.create({
     height: 500,
     borderRadius: 12,
     overflow: 'hidden',
+  },
+  videoButton: {
+    width: '100%',
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  videoButtonText: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   title: {
     fontSize: 36,
@@ -253,5 +284,20 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
     marginTop: 10,
+  },
+
+  videoButton2: {
+    width: '100%',
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  videoButtonText2: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 });

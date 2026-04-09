@@ -85,7 +85,7 @@ useEffect(() => {
 
 if (!fontsLoaded) return null;
 
-  return (
+return (
   <ScrollView
     style={styles.container}
     contentContainerStyle={styles.scrollContent}
@@ -253,6 +253,7 @@ const styles = StyleSheet.create({
     textShadowColor: '#8a2be2',
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 20,
+    textAlign: 'center',
   },
 
   subtitle: {

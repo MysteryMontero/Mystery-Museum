@@ -5,8 +5,7 @@ import { Image } from 'expo-image';
 
 export default function FutureModsScreen() {
   const router = useRouter();
-  const [search, setSearch] = useState('');
-
+  const [search, setSearch] = useState('')
   const mods = [
     {
       id: 'australia',
@@ -147,14 +146,13 @@ const styles = StyleSheet.create({
   },
 
   cardGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 50,
-    paddingLeft: 40,
+    width: '100%',
+    alignItems: 'center',
+    gap: 20,
   },
 
   card: {
-    width: '100%',
+    width: '92%',
     backgroundColor: 'rgba(0,0,0,0.25)',
     borderRadius: 18,
     overflow: 'hidden',

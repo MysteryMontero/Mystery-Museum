@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
-import { WebView } from 'react-native-webview';
 import { Image } from 'expo-image';
+import * as WebBrowser from 'expo-web-browser';
 
 const sliderImages = [
   require('../../assets/images/Country/USA/USA Ball.png'),
@@ -11,6 +11,16 @@ const sliderImages = [
   require('../../assets/images/Country/USA/USA Female.png'),
   require('../../assets/images/Country/USA/USA Tank.png'),
 ];
+
+const openVideo = async () => {
+  const url = 'https://www.youtube.com/watch?v=gTNMgj5Hdy0';
+
+  if (Platform.OS === 'web') {
+    window.open(url, '_blank');
+  } else {
+    await WebBrowser.openBrowserAsync(url);
+  }
+};
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
@@ -161,10 +171,9 @@ export default function Screen() {
             style={styles.video}
           />
         ) : (
-          <WebView
-            source={{ uri: 'https://www.youtube.com/embed/gTNMgj5Hdy0' }}
-            style={styles.video}
-          />
+          <Pressable onPress={openVideo} style={styles.videoButton}>
+            <Text style={styles.videoButtonText}>Watch Showcase Video</Text>
+          </Pressable>
         )}
 
       <Text style={styles.description}>
@@ -297,6 +306,19 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     overflow: 'hidden',
   },
+  videoButton: {
+    width: '100%',
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  videoButtonText: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
   title: {
     fontSize: 36,
     fontWeight: 'bold',
@@ -307,11 +329,13 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 500,
     marginTop: 20,
+    borderRadius: 10,
   },
   minorImage: {
     width: '50%',
     height: 300,
     marginTop: 20,
+    borderRadius: 10,
   },
   weaponRow: {
     flexDirection: 'row',

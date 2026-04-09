@@ -1,4 +1,4 @@
-import { View, StyleSheet, Animated, Pressable, Text } from 'react-native';
+import { View, StyleSheet, Animated, Pressable, Text, Platform } from 'react-native';
 import { useEffect, useRef, useState } from 'react';
 import { Image } from 'expo-image';
 
@@ -9,6 +9,7 @@ interface SlideshowProps {
 export default function Slideshow({ images }: SlideshowProps) {
   const [index, setIndex] = useState(0);
   const fadeAnim = useRef(new Animated.Value(1)).current;
+  const isMobile = Platform.OS !== 'web';
 
   const changeSlide = (newIndex: number) => {
     Animated.timing(fadeAnim, {
@@ -36,23 +37,27 @@ export default function Slideshow({ images }: SlideshowProps) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.frame}>
+      <View style={[styles.frame, isMobile && styles.frameMobile]}>
         <Animated.View style={{ opacity: fadeAnim, width: '100%', height: '100%' }}>
           <Image
             source={images[index]}
             style={styles.image}
-            contentFit="contain"
+            contentFit="cover"
           />
         </Animated.View>
 
-        {/* Left Arrow */}
-        <Pressable style={[styles.arrow, styles.left]} onPress={() => changeSlide(index - 1)}>
-          <Text style={styles.arrowText}>‹</Text>
+        <Pressable
+          style={[styles.arrow, styles.left, isMobile && styles.arrowMobile]}
+          onPress={() => changeSlide(index - 1)}
+        >
+          <Text style={[styles.arrowText, isMobile && styles.arrowTextMobile]}>‹</Text>
         </Pressable>
 
-        {/* Right Arrow */}
-        <Pressable style={[styles.arrow, styles.right]} onPress={() => changeSlide(index + 1)}>
-          <Text style={styles.arrowText}>›</Text>
+        <Pressable
+          style={[styles.arrow, styles.right, isMobile && styles.arrowMobile]}
+          onPress={() => changeSlide(index + 1)}
+        >
+          <Text style={[styles.arrowText, isMobile && styles.arrowTextMobile]}>›</Text>
         </Pressable>
       </View>
 
@@ -74,12 +79,17 @@ const styles = StyleSheet.create({
 
   frame: {
     width: '65%',
-    height: 750, // 🔥 bigger slideshow
+    height: 750,
     borderRadius: 20,
     overflow: 'hidden',
     backgroundColor: 'rgba(0,0,0,0.2)',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+
+  frameMobile: {
+    width: '92%',
+    height: 260,
   },
 
   image: {
@@ -90,12 +100,18 @@ const styles = StyleSheet.create({
   arrow: {
     position: 'absolute',
     top: '50%',
-    transform: [{ translateY: -100 }],
-    padding: 50,
+    transform: [{ translateY: -30 }],
+    paddingHorizontal: 18,
+    paddingVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,0.5)',
-    borderRadius: 30,
+    borderRadius: 18,
+  },
+
+  arrowMobile: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
   },
 
   left: {
@@ -107,9 +123,13 @@ const styles = StyleSheet.create({
   },
 
   arrowText: {
-    fontSize: 100,
+    fontSize: 48,
     color: 'white',
     fontWeight: 'bold',
+  },
+
+  arrowTextMobile: {
+    fontSize: 34,
   },
 
   dots: {
@@ -119,8 +139,8 @@ const styles = StyleSheet.create({
   },
 
   dot: {
-    width: 20,
-    height: 20,
+    width: 12,
+    height: 12,
     borderRadius: 999,
     backgroundColor: 'rgba(255,255,255,0.4)',
   },
