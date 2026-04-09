@@ -28,8 +28,6 @@ export default function HomeScreen() {
     outputRange: ['#ff0000', '#00ff00', '#0000ff', '#ff0000'],
   });
 
-  if (!fontsLoaded) return null;
-
 
 const sliderImages = [
   require('../../assets/images/TF2/TF2 Kazotsky Kick.png'),
@@ -85,6 +83,7 @@ useEffect(() => {
   return () => clearInterval(timer);
 }, [index, goToIndex, sliderImages.length]);
 
+if (!fontsLoaded) return null;
 
   return (
   <ScrollView

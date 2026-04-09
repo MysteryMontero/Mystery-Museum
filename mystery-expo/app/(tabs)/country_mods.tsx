@@ -357,7 +357,7 @@ const styles = StyleSheet.create({
     color: '#000000',
     marginTop: 0,
     lineHeight: 40,
-    alignSelf: 'center',
+    textAlign: 'center',
   },
 
   downloadButton: {
