@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, Pressable, ScrollView, Platform, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
-import { WebView } from 'react-native-webview';
+import * as WebBrowser from 'expo-web-browser';
 import Slideshow from '@/components/Slideshow';
 import { Image } from 'expo-image';
 
@@ -16,6 +16,16 @@ const sliderImages = [
   require('../../../assets/images/Ruckus9.png'),
   require('../../../assets/images/Ruckus10.png'),
 ];
+
+const openVideo = async () => {
+  const url = 'https://www.youtube.com/watch?v=IywhXp7dHH8';
+
+  if (Platform.OS === 'web') {
+    window.open(url, '_blank');
+  } else {
+    await WebBrowser.openBrowserAsync(url);
+  }
+};
 
 const downloadMod = () => {
   if (Platform.OS === "web") {
@@ -49,10 +59,9 @@ export default function Screen() {
           style={styles.video}
         />
       ) : (
-        <WebView
-          source={{ uri: 'https://www.youtube.com/embed/IywhXp7dHH8' }}
-          style={styles.video}
-        />
+        <Pressable onPress={openVideo} style={styles.videoButton}>
+          <Text style={styles.videoButtonText}>Watch Showcase Video</Text>
+        </Pressable>
       )}
 
       <Text style={styles.title}>Ruckus Rhino</Text>
@@ -175,6 +184,19 @@ const styles = StyleSheet.create({
     height: 500,
     borderRadius: 12,
     overflow: 'hidden',
+  },
+  videoButton: {
+    width: '100%',
+    backgroundColor: '#000000',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  videoButtonText: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   title: {
     fontSize: 36,
