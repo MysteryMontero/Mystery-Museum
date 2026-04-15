@@ -187,22 +187,23 @@ const styles = StyleSheet.create({
 
   galleryContainer: {
     width: '100%',
-    height: '10%',
+    height: 820,
     marginTop: 10,
+    marginBottom: 40,
   },
 
   galleryTitle2: {
     fontSize: 32,
     fontWeight: 'bold',
     color: '#000000',
-    marginTop: 500,
+    marginTop: 20,
     textAlign: 'center',
     width: '100%',
   },
 
   galleryContainer2: {
     width: '100%',
-    height: '10%',
+    height: 820,
     marginTop: 10,
   },
 });
