@@ -23,6 +23,9 @@ Mod Roulette: This is a neat mechanic added into the app that picks a random mod
 ## Problem Statement
 Modding in Minecraft has been around for a long time to the point where it is now part of the game itself. It serves as a creative space for those with endless ideas and as a learning platform for aspiring programmers. Minecraft mods introduce new entities or gameplay mechanics that make the main game a whole lot more interesting and entertaining.
 
+## Setup
+This project requires Visual Studio Code to open. I guarantee there's other alternatives, but this is the way I have been opening it. You will also need Node.js installed. When you are in VS Code, open a terminal, type 'cd mystery-expo', and then type 'npm start'. once it loads up, press the W key for the web version or the A key for Android, depending on what device you are using. The app should load in and be available.
+
 ## Target Users
 - Minecraft Players
 - Mod Creators
